@@ -7,30 +7,38 @@ a {
 }
 
 a:hover {
-  color: magenta
+  color: magenta;
+  transition: 0.5s ease-in-out;
+}
+
+.nav-bar-component {
+  width: 100%;
+  background-color: aquamarine;
+  border-bottom: 3px solid black;
 }
 
 h1 {
-  background-color: aquamarine;
   font-family: 'Bangers', cursive;
   font-size: 50px;
   margin: 0;
   padding: 20px;
   text-align: left;
 }
+.title-logo {
+  display: flex;
+  align-items: center;
+}
 .nav {
   font-family: 'Bangers', cursive;
   font-size: 40px;
   display: flex;
   padding: 20px;
-  background-color: aquamarine;
-  align-items: center;
+  flex-wrap: wrap;
 }
 
 .navlink {
   margin: 10px;
-  justify-content: center;
-
+  margin-top: 0;
 }
 
 .cassette-logo {
@@ -39,4 +47,21 @@ h1 {
 
 .home {
   text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+
+  h1 {
+    font-size: 30px;
+  }
+  .nav { 
+    font-size: 20px;
+    text-align: right;
+    margin-right: 5px;
+  }
+
+    .cassette-logo {
+      height: 50px;
+    }
+
 }
