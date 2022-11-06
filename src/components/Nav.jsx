@@ -12,7 +12,8 @@ function Nav() {
           <div className="navlink"><NavLink to="/artists">Artists</NavLink></div>
           <div className="navlink"><NavLink to="/albums">Albums</NavLink></div>
           <div className="navlink"><NavLink to="/genres">Genres</NavLink></div>
-          <div className="navlink"><NavLink to="/songs">Songs</NavLink></div>
+        <div className="navlink"><NavLink to="/songs">Songs</NavLink></div>
+        <div className="navlink"><NavLink to="/about">About</NavLink></div>
       </div>
  </div>
     

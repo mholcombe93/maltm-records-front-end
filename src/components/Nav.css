@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Shadow&family=Londrina+Solid:wght@300&display=swap');
+/* font-family: 'Londrina Outline', cursive;
+font-family: 'Londrina Shadow', cursive;
+font-family: 'Londrina Solid', cursive; */
 
 a {
   text-decoration: none;
@@ -7,7 +9,7 @@ a {
 }
 
 a:hover {
-  color:  rgb(199, 71, 136);
+  color:  rgb(217, 56, 136);
   transition: 0.5s ease-in-out;
 }
 
@@ -18,7 +20,7 @@ a:hover {
 }
 
 h1 {
-  font-family: 'Bangers', cursive;
+  font-family: 'Londrina Shadow', cursive;
   font-size: 50px;
   margin: 0;
   padding: 20px;
@@ -29,7 +31,7 @@ h1 {
   align-items: center;
 }
 .nav {
-  font-family: 'Bangers', cursive;
+  font-family: 'Londrina Solid', cursive;
   font-size: 30px;
   display: flex;
   padding: 20px;
@@ -65,3 +67,4 @@ h1 {
     }
 
 }
+
