@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: magenta
+}
+
+h1 {
+  background-color: aquamarine;
+  font-family: 'Bangers', cursive;
+  font-size: 50px;
+  margin: 0;
+  padding: 20px;
+  text-align: left;
+}
+.nav {
+  font-family: 'Bangers', cursive;
+  font-size: 40px;
+  display: flex;
+  padding: 20px;
+  background-color: aquamarine;
+  align-items: center;
+}
+
+.navlink {
+  margin: 10px;
+  justify-content: center;
+
+}
+
+.cassette-logo {
+  height: 130px;
+}
+
+.home {
+  text-align: left;
+}
