@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Modal from "./Modal"
 
+
 function ArtistImage({artist}) {
   const [showModal, setShowModal] = useState(false);
   return (

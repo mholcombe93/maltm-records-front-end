@@ -11,7 +11,6 @@ function Modal(props) {
           <h2 className="modal-title">{props.name}</h2>
         </div>
         <div className="modal-body">
-        <p>info here/artist image</p>
         </div>
         
         <div className="modal-footer">
