@@ -33,7 +33,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/artists" element={<ArtistSearch />} />
         <Route path="/albums" element={<Albums />} />
-       
         <Route path="/genres" element={<Genres />} />
         <Route path="/about" element={<About />} />
       </Routes>
