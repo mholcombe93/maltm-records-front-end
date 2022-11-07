@@ -36,6 +36,7 @@ h1 {
   display: flex;
   padding: 20px;
   flex-wrap: wrap;
+  margin-top: 0;
 }
 
 .navlink {
@@ -45,6 +46,12 @@ h1 {
 
 .cassette-logo {
   height: 130px;
+  transition: transform .4s;
+  padding-left: 10px;
+}
+
+.cassette-logo:hover {
+  transform: scale(1.1);
 }
 
 .home {
@@ -58,12 +65,17 @@ h1 {
   }
   .nav { 
     font-size: 20px;
-    text-align: right;
-    margin-right: 5px;
+    justify-content: left;
+
   }
 
+  .navlink {
+    margin: 5px;
+    margin-top: 0;
+  }
     .cassette-logo {
       height: 50px;
+      padding: 10px;
     }
 
 }
