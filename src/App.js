@@ -7,12 +7,10 @@ import About from "./screens/About.jsx";
 import Genres from "./screens/Genres";
 import axios from "axios"
 import React, { useState, useEffect } from "react"
-
 import { Routes, Route } from "react-router-dom";
 
 function App() {
-  
-  
+
   const URL = "https://b-side-music.up.railway.app/"
   const [call, setCall] = useState([])
   useEffect(() => {
@@ -22,7 +20,6 @@ function App() {
       console.log(response.data)
   }
      callApi()  
-      
   }, [])
 
 
