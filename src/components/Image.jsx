@@ -1,8 +1,17 @@
-function Image(props) {
+import { useState } from "react"
+import Modal from "./Modal"
+
+function Image({artist}) {
+  const [showModal, setShowModal] = useState(false);
   return (
     <>
-      <div>
-        <img src={props} className="gallery-pic" alt ="Artist Image" />
+       <div className="image">
+      <img src={artist.artistImg} className="gallery-pic" alt="Artist Image" onClick={() => setShowModal(true)} />
+      <Modal
+        onClose={() => setShowModal(false)}
+        show={showModal}
+        name={artist.name}
+        />
       </div>
     </>
   )
