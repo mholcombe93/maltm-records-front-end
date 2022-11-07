@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Modal from "./Modal"
 
-function Image({artist}) {
+function ArtistImage({artist}) {
   const [showModal, setShowModal] = useState(false);
   return (
     <>
@@ -17,4 +17,4 @@ function Image({artist}) {
   )
 }
 
-export default Image
+export default ArtistImage

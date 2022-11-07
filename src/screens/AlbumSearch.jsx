@@ -1,24 +1,24 @@
 import React, { useState } from "react";
-import ArtistImage from "../components/ArtistImage";
+import AlbumCover from "../components/AlbumCover.jsx";
 import Searchbar from "../components/Searchbar";
 
-function ArtistSearch({ artists }) {
+function AlbumSearch ({ albums }) {
   const [searchTerm, setSearchTerm] = useState("");
 
   return (
     <>
       <div>
-        <h1>Artists</h1>
+        <h1>Albums</h1>
         <Searchbar setSearchTerm={setSearchTerm} />
         <div className="gallery">
-          {artists
-            .filter((artist) => {
-              return artist.name
+          {albums
+            .filter((album) => {
+              return album.title
                 .toLowerCase()
                 .includes(searchTerm.toLowerCase());
             })
-            .map((artist) => (
-              <ArtistImage key={artist._id} artist={artist} />
+            .map((album) => (
+              <AlbumCover key={album._id} album={album} />
             ))}
         </div>
       </div>
@@ -26,4 +26,4 @@ function ArtistSearch({ artists }) {
   );
 }
 
-export default ArtistSearch;
+export default AlbumSearch;
