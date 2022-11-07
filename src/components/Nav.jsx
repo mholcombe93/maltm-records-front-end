@@ -1,4 +1,4 @@
-import "./Nav.css"
+import "./styles/Nav.css"
 import { NavLink } from "react-router-dom"
 import cassette from "../images/cassette-tape-no-title.png"
 
