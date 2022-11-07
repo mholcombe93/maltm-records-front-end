@@ -1,23 +1,29 @@
 import React, { useState } from "react";
-import Modal from "../components/Modal"
-import Image from "../components/Image"
+import Image from "../components/Image";
 import Searchbar from "../components/Searchbar";
 
-function ArtistSearch() {
-  const [showModal, setShowModal] = useState(false);
+function ArtistSearch({ artists }) {
   const [searchTerm, setSearchTerm] = useState("");
 
   return (
     <>
-      <h1>Artists</h1>  
-      <Searchbar setSearchTerm={setSearchTerm} />
-      <Image />
-      <Modal
-          onClose={() => setShowModal(false)}
-          show={showModal}
-        />
-      <button onClick={() => setShowModal(true)}>Get info</button>
-      </>
-  )
+      <div>
+        <h1>Artists</h1>
+        <Searchbar setSearchTerm={setSearchTerm} />
+        <div className="gallery">
+          {artists
+            .filter((artist) => {
+              return artist.name
+                .toLowerCase()
+                .includes(searchTerm.toLowerCase());
+            })
+            .map((artist) => (
+              <Image key={artist._id} artist={artist} />
+            ))}
+        </div>
+      </div>
+    </>
+  );
 }
-export default ArtistSearch
+
+export default ArtistSearch;
