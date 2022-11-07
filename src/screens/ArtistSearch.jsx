@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Image from "../components/Image";
+import ArtistImage from "../components/ArtistImage";
 import Searchbar from "../components/Searchbar";
 
 function ArtistSearch({ artists }) {
@@ -18,7 +18,7 @@ function ArtistSearch({ artists }) {
                 .includes(searchTerm.toLowerCase());
             })
             .map((artist) => (
-              <Image key={artist._id} artist={artist} />
+              <ArtistImage key={artist._id} artist={artist} />
             ))}
         </div>
       </div>
