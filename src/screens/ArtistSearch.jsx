@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import ArtistImage from "../components/ArtistImage";
 import Searchbar from "../components/Searchbar";
+import "../App.css"
+
 
 function ArtistSearch({ artists }) {
   const [searchTerm, setSearchTerm] = useState("");
