@@ -1,0 +1,25 @@
+.bio {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+}
+
+.bio-photo {
+ width: 100px;
+ height: 100px;
+ border-radius: 50%;
+ background-color: gray;
+ align-items: center;
+ justify-content: center;
+ margin: 10px;
+ -webkit-box-shadow: 10px 10px 28px 0px rgba(0,0,0,0.75);
+ -moz-box-shadow: 10px 10px 28px 0px rgba(0,0,0,0.75);
+ box-shadow: 10px 10px 28px 0px rgba(0,0,0,0.75);
+}
+
+.bio-content {
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}

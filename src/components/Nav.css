@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Shadow&family=Londrina+Solid:wght@300&display=swap');
+/* font-family: 'Londrina Outline', cursive;
+font-family: 'Londrina Shadow', cursive;
+font-family: 'Londrina Solid', cursive; */
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color:  rgb(217, 56, 136);
+  transition: 0.5s ease-in-out;
+}
+
+.nav-bar-component {
+  width: 100%;
+  background-color: aquamarine;
+  border-bottom: 3px solid black;
+}
+
+h1 {
+  font-family: 'Londrina Shadow', cursive;
+  font-size: 50px;
+  margin: 0;
+  padding: 20px;
+  text-align: left;
+}
+.title-logo {
+  display: flex;
+  align-items: center;
+}
+.nav {
+  font-family: 'Londrina Solid', cursive;
+  font-size: 30px;
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+  margin-top: 0;
+}
+
+.navlink {
+  margin: 10px;
+  margin-top: 0;
+}
+
+.cassette-logo {
+  height: 130px;
+  transition: transform .4s;
+  padding-left: 10px;
+}
+
+.cassette-logo:hover {
+  transform: scale(1.1);
+}
+
+.home {
+  text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+
+  h1 {
+    font-size: 30px;
+  }
+  .nav { 
+    font-size: 20px;
+    justify-content: left;
+
+  }
+
+  .navlink {
+    margin: 5px;
+    margin-top: 0;
+  }
+    .cassette-logo {
+      height: 50px;
+      padding: 10px;
+    }
+
+}
+
