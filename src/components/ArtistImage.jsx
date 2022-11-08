@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Modal from "./Modal"
+// import Modal from "./Modal"
 
 
 function ArtistImage({artist}) {
@@ -8,11 +8,11 @@ function ArtistImage({artist}) {
     <>
        <div className="image">
       <img src={artist.artistImg} className="gallery-pic" alt="Artist Image" onClick={() => setShowModal(true)} />
-      <Modal
+      {/* <Modal
         onClose={() => setShowModal(false)}
         show={showModal}
         name={artist.name}
-        />
+        /> */}
       </div>
     </>
   )
