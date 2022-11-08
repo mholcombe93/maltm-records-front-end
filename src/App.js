@@ -6,6 +6,7 @@ import AlbumSearch from "./screens/AlbumSearch.jsx";
 import Albums from "./screens/Albums";
 import About from "./screens/About.jsx";
 import Genres from "./screens/Genres";
+import ArtistDetail from "./screens/ArtistDetail";
 import React, { useState, useEffect } from "react";
 import { Routes, Route, useParams } from "react-router-dom";
 import { getArtists } from "./services/artists.js";
@@ -32,7 +33,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/artists" element={<ArtistSearch artists={artists} />} />
-        <Route path="/albums" element={<AlbumSearch albums={albums} artistID={{artistID}}/>} />
+        <Route path={`/artists/:artistID`} element={<ArtistDetail />} />
+        <Route
+          path="/albums"
+          element={<AlbumSearch albums={albums} artistID={{ artistID }} />}
+        />
         <Route path="/albums" element={<Albums />} />
         <Route path="/genres" element={<Genres />} />
         <Route path="/about" element={<About />} />
