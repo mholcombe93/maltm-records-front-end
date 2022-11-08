@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ArtistImage from "../components/ArtistImage";
 import Searchbar from "../components/Searchbar";
 
-function ArtistSearch({ artists }) {
+function ArtistSearch() {
   const [searchTerm, setSearchTerm] = useState("");
 
   return (
