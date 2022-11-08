@@ -6,8 +6,13 @@ import AlbumSearch from "./screens/AlbumSearch.jsx";
 import Albums from "./screens/Albums";
 import About from "./screens/About.jsx";
 import Genres from "./screens/Genres";
+
+import GenreDetail from "./screens/GenreDetail"
+
+
 import ArtistDetail from "./screens/ArtistDetail";
 import AddAlbum from "./screens/AddAlbum.jsx"
+
 import React, { useState, useEffect } from "react";
 import { Routes, Route, useParams } from "react-router-dom";
 import {getArtists} from "./services/artists.js"
@@ -43,6 +48,7 @@ function App() {
         <Route path="/albums" element={<Albums />} />
         <Route path="/genres" element={<Genres />} />
         <Route path="/about" element={<About />} />
+        <Route path="/genre/:genre_option" element={<GenreDetail artists={artists} />} />
         <Route path= "/artists/:artistID/add-album" element = {<AddAlbum/>} />
       </Routes>
     </>
