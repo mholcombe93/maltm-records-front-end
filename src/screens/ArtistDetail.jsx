@@ -14,6 +14,8 @@ function ArtistDetail() {
     const fetchArtist = async () => {
       const response = await getArtist(artistID);
       setArtist(response);
+      const res = await getArtist(artistName)
+      setArtistName(res)
     };
     fetchArtist();
   }, []);
