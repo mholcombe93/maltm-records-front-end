@@ -4,7 +4,6 @@ import { getArtist } from "../services/artists.js";
 
 function ArtistDetail() {
   const [artist, setArtist] = useState({});
-  const [artistName, setArtistName] = useState("")
 
   const { artistID } = useParams();
 
@@ -12,8 +11,6 @@ function ArtistDetail() {
     const fetchArtist = async () => {
       const response = await getArtist(artistID);
       setArtist(response);
-      const res = await getArtist(artistName)
-      setArtistName(res)
     };
     fetchArtist();
   }, []);

@@ -26,8 +26,6 @@ function AddAlbum() {
     }))
   }
 
-
-
   const handleSubmit = async (e) => {
     e.preventDefault()
     await createAlbum (album)
