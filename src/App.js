@@ -7,10 +7,12 @@ import Albums from "./screens/Albums";
 import About from "./screens/About.jsx";
 import Genres from "./screens/Genres";
 import ArtistDetail from "./screens/ArtistDetail";
+import AddAlbum from "./screens/AddAlbum.jsx"
 import React, { useState, useEffect } from "react";
 import { Routes, Route, useParams } from "react-router-dom";
-import { getArtists } from "./services/artists.js";
-import { getAlbums } from "./services/albums.js";
+import {getArtists} from "./services/artists.js"
+import { getAlbums } from "./services/albums.js"
+
 
 function App() {
   const [artists, setArtists] = useState([]);
@@ -41,6 +43,7 @@ function App() {
         <Route path="/albums" element={<Albums />} />
         <Route path="/genres" element={<Genres />} />
         <Route path="/about" element={<About />} />
+        <Route path= "/artists/:artistID/add-album" element = {<AddAlbum/>} />
       </Routes>
     </>
   );
