@@ -4,7 +4,7 @@ import Searchbar from "../components/Searchbar";
 import "../App.css"
 
 
-function ArtistSearch({ artists }) {
+function ArtistSearch() {
   const [searchTerm, setSearchTerm] = useState("");
 
   return (
