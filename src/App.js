@@ -6,11 +6,13 @@ import AlbumSearch from "./screens/AlbumSearch.jsx";
 import Albums from "./screens/Albums";
 import About from "./screens/About.jsx";
 import Genres from "./screens/Genres";
+import AddAlbum from "./screens/AddAlbum.jsx"
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import {getArtists} from "./services/artists.js"
-import {getAlbums} from "./services/albums.js"
+import { getAlbums } from "./services/albums.js"
+
 
 function App() {
   const [artists, setArtists] = useState([]);
@@ -36,6 +38,7 @@ function App() {
         <Route path="/albums" element={<Albums />} />
         <Route path="/genres" element={<Genres />} />
         <Route path="/about" element={<About />} />
+        <Route path= "/artists/:artistID/add-album" element = { } />
       </Routes>
     </>
   );
