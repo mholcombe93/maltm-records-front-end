@@ -18,6 +18,25 @@ export const getArtist = async (id) => {
   }
 };
 
+// export const getArtistName = async () => {
+//   try{
+//   const response = await api.get()
+//   return response.data;
+// } catch (error) {
+//   throw error;
+// }
+  
+// }
+
+// export const getAlbumName = async () => {
+//   try{
+//     const response = await api.get()
+//     return response.data;
+//   } catch (error) {
+//     throw error;
+//   }
+// }
+
 export const createArtist = async (artistData) => {
   try {
     const response = await api.post("/artists", artistData);
@@ -43,53 +62,9 @@ export const deleteArtist = async (id) => {
   } catch (error) {
     throw error;
   }
+  //how to delete albums with artist
 };
 
-
-export const getAlbums = async () => {
-  try {
-    const response = await api.get("/albums");
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
-};
-
-export const getAlbum = async (id) => {
-  try {
-    const response = await api.get(`/album/${id}`);
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
-};
-
-export const createAlbum = async (albumData) => {
-  try {
-    const response = await api.post("/album", albumData);
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
-};
-
-export const updateAlbum = async (id, albumData) => {
-  try {
-    const response = await api.put(`/artists/${id}`, albumData);
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
-};
-
-export const deleteAlbum = async (id) => {
-  try {
-    const response = await api.delete(`/albums/${id}`);
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
-};
 
 
 
