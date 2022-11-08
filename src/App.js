@@ -9,8 +9,10 @@ import Genres from "./screens/Genres";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import {getArtists} from "./services/artists.js"
-import {getAlbums} from "./services/albums.js"
+import { getArtists } from "./services/artists.js";
+import { getAlbums } from "./services/albums.js";
+import FilterCharacter from "./components/FilterCharacter.jsx";
+import SearchFilter from "./components/SearchFilter";
 
 function App() {
   const [artists, setArtists] = useState([]);
@@ -36,6 +38,8 @@ function App() {
         <Route path="/albums" element={<Albums />} />
         <Route path="/genres" element={<Genres />} />
         <Route path="/about" element={<About />} />
+        <Route path="/albums/search" element={<SearchFilter />} />
+        <Route path="/albums/search/:character" element={<SearchFilter />} />
       </Routes>
     </>
   );
