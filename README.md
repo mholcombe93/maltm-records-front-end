@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# MALTM Records Presents: B-Side Music Artist Search Site
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Concept
+[B-Side Music]() is here to represent music from artists that need to be heard. Find and search for artists of varying genres and discover songs to add to your collections. Do you have an artist you want represented? We can add them to our expanding list and help get them discovered. Flip your record to the B side and get ready to hear something new.
+#
 
-## Available Scripts
+## Overview
+This is a front-end deployed website using an [API by the MALTM Records Team.](https://github.com/akauf13/maltm-backend)
+#
 
-In the project directory, you can run:
+## CRUD Functionality
+This site allows form the addition, deletion, and edit of an artist or album through our admin verification system.
 
-### `npm start`
+* GET 
+ (get) get all Queens = /
+  (get) get a Queen with _id= /:id
+  (get) get a Queen wtih name = /name/:name
+  (get) get a Queen with order number = /order/:order
+  (post) add a Queen = /
+  (put) update a Queen = /:id
+  (delete) remove a Queen = /:id
+#
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Additional Programs and Depenencies 
+This is a [REACT](https://reactjs.org/) based website hosted on [Netlify](https://netlify.com/). No other programs or dep
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##### Dependencies:
+*React-Router-Dom
+*React-Scripts
+*Axios
 
-### `npm test`
+#
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## MALTM Team Credits
+##### Back-End:
+[Adam Kaufman](https://github.com/akauf13), 
+[Tashon Forrester](https://github.com/tashonvictoria)
+##### Front-End: 
+[Lauren Powers](https://github.com/laurenpowers20), 
+[Matthew Holcombe](https://github.com/mholcombe93), [Malik Washington]()
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
