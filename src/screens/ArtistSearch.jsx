@@ -21,7 +21,7 @@ function ArtistSearch({artists}) {
                 .includes(searchTerm.toLowerCase());
             })
             .map((artist, index) => (
-              <Link to={`/artist/${artist.name}`}> 
+              <Link to={`/artists/${artist._id}`}> 
               <ArtistImage key={index} artist={artist} />
             </Link>
             ))}
