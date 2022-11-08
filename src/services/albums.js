@@ -9,38 +9,40 @@ export const getAlbums = async () => {
   }
 };
 
-// export const getStudent = async (id) => {
-//   try {
-//     const response = await api.get(`/students/${id}`);
-//     return response.data;
-//   } catch (error) {
-//     throw error;
-//   }
-// };
+export const getAlbum = async (id) => {
+  try {
+    const response = await api.get(`/album/${id}`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
 
-// export const createStudent = async (studentData) => {
-//   try {
-//     const response = await api.post("/students", studentData);
-//     return response.data;
-//   } catch (error) {
-//     throw error;
-//   }
-// };
+export const createAlbum = async (albumData) => {
+  try {
+    const response = await api.post("/album", albumData);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
 
-// export const updateStudent = async (id, studentData) => {
-//   try {
-//     const response = await api.put(`/students/${id}`, studentData);
-//     return response.data;
-//   } catch (error) {
-//     throw error;
-//   }
-// };
+export const updateAlbum = async (id, albumData) => {
+  try {
+    const response = await api.put(`/artists/${id}`, albumData);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
 
-// export const deleteStudent = async (id) => {
-//   try {
-//     const response = await api.delete(`/students/${id}`);
-//     return response.data;
-//   } catch (error) {
-//     throw error;
-//   }
-// };
+export const deleteAlbum = async (id) => {
+  try {
+    const response = await api.delete(`/albums/${id}`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }// remove from the artist as well in backend
+};
+
+
