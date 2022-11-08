@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { getArtist } from "../services/artists.js";
 
 function ArtistDetail() {
@@ -17,9 +17,10 @@ function ArtistDetail() {
 
   return (
     <div>
+      <h1>Artist Detail</h1>
       <h1> {artist.name}</h1>
       <Link to={`/artists/${artist._id}/add-album`}>
-        <button className="addAlbumButton"> add an album to your artist</button>
+        <button className="addAlbumButton">add album</button>
       </Link>
     </div>
   );
