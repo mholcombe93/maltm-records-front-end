@@ -6,6 +6,7 @@ import AlbumSearch from "./screens/AlbumSearch.jsx";
 import Albums from "./screens/Albums";
 import About from "./screens/About.jsx";
 import Genres from "./screens/Genres";
+import GenreDetail from "./screens/GenreDetail"
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
@@ -36,6 +37,7 @@ function App() {
         <Route path="/albums" element={<Albums />} />
         <Route path="/genres" element={<Genres />} />
         <Route path="/about" element={<About />} />
+        <Route path="/genre/:genre_option" element={<GenreDetail artists={artists} />} />
       </Routes>
     </>
   );
