@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AlbumCover from "../components/AlbumCover.jsx";
 import Searchbar from "../components/Searchbar";
+import "../App.css"
 
 function AlbumSearch ({ albums }) {
   const [searchTerm, setSearchTerm] = useState("");

@@ -1,5 +1,36 @@
 
 body {
   text-align: center;
-  background-color: rgb(108, 130, 143);
+  background-color: rgb(165, 211, 219);
+}
+
+input {
+  width: 300px;
+  height: 30px;
+  color: black;
+  margin: 10px;
+}
+
+.gallery{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.gallery-pic {
+  margin: 5px;
+  height: 250px;
+  cursor: pointer;
+  border: 1px black solid;
+  -webkit-box-shadow: 10px 10px 23px 4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 23px 4px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 23px 4px rgba(0,0,0,0.75);
+}
+
+@media only screen and (max-width: 600px) {
+
+      .gallery-pic {
+        height: 100px;
+      }
+
 }
