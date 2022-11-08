@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { useParams} from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 function AddAlbum() {
 
@@ -13,7 +14,13 @@ function AddAlbum() {
     artist_id: artistID
   })
 
+  let navigate = useNavigate()
 
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    await AddAlbum (album)
+    navigate(`/artists/${artistID}`, {replace: true})
+  }
 
   return (
     <form onSubmit={handleSubmit}>
