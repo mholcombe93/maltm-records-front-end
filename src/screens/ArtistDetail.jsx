@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getArtist } from "../services/artists.js";
 
+
+
 function ArtistDetail() {
   const [artist, setArtist] = useState({});
-
   const { artistID } = useParams();
 
   useEffect(() => {
@@ -17,7 +18,9 @@ function ArtistDetail() {
 
   return (
     <div>
-      <h1>{artist.artistName}</h1>
+      <h1>Add Album</h1>
+      <h2>{artist.name}</h2>
+      
 
       <Link to={`/artists/${artist._id}/add-album`}>
         <button className="addAlbumButton">add album</button>

@@ -11,7 +11,7 @@ export const getAlbums = async () => {
 
 export const getAlbum = async (id) => {
   try {
-    const response = await api.get(`/album/${id}`);
+    const response = await api.get(`/albums/${id}`);
     return response.data;
   } catch (error) {
     throw error;
@@ -20,7 +20,7 @@ export const getAlbum = async (id) => {
 
 export const createAlbum = async (albumData) => {
   try {
-    const response = await api.post("/album", albumData);
+    const response = await api.post("/albums", albumData);
     return response.data;
   } catch (error) {
     throw error;
