@@ -38,7 +38,7 @@ function App() {
         <Route path="/albums" element={<Albums />} />
         <Route path="/genres" element={<Genres />} />
         <Route path="/about" element={<About />} />
-        <Route path= "/artists/:artistID/add-album" element = { } />
+        <Route path= "/artists/:artistID/add-album" element = {<AddAlbum/>} />
       </Routes>
     </>
   );
