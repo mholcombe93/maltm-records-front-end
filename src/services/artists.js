@@ -9,235 +9,88 @@ export const getArtists = async () => {
   }
 };
 
-// export const getArtists = async (req, res) => {
-//   try {
-//     const artists = await Artist.find()
-//     res.json(artists)
+export const getArtist = async (id) => {
+  try {
+    const response = await api.get(`/artists/${id}`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
 
-//   } catch (error) {
-//     console.error(error)
-//     res.status(500).json({error: error.message})
-//   }
-// }
+export const createArtist = async (artistData) => {
+  try {
+    const response = await api.post("/artists", artistData);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
 
-// export const getArtist = async (req, res) => {
-//   try {
-//     const { id } = req.params
-//     const artist = await Artist.findById(id)
+export const updateArtist = async (id, artistData) => {
+  try {
+    const response = await api.put(`/artists/${id}`, artistData);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
 
-//     if (artist) {
-//       return res.json(artist)
-//     }
-
-//     res.status(404).json({message: "Artist not found!"})
-  
-//   } catch (error) {
-//     console.error(error)
-//     res.status(500).json({error: error.message})
-//   }
-// }
-
-// export const getArtistName = async (req, res) => {
-//   try {
-//     const { name } = req.params
-//     const artist = await Artist.find({name: name})
-
-//     if (artist) {
-//       return res.json(artist)
-//     }
-
-//     res.status(404).json({message: "Artist not found!"})
-  
-//   } catch (error) {
-//     console.error(error)
-//     res.status(500).json({error: error.message})
-//   }
-// }
-
-// export const getArtistGenre = async (req, res) => {
-//   try {
-//     const { genre } = req.params
-//     const artist = await Artist.find({genre: genre})
-
-//     if (artist) {
-//       return res.json(artist)
-//     }
-
-//     res.status(404).json({message: "Artist not found!"})
-  
-//   } catch (error) {
-//     console.error(error)
-//     res.status(500).json({error: error.message})
-//   }
-// }
-
-// export const createArtist = async (req, res) => {
-//   try {
-//     const artist = new Artist(req.body)
-//     await artist.save()
-//     res.status(201).json(artist)
-
-//   } catch (error) {
-//     console.error(error)
-//     res.status(500).json({error: error.message})
-//   }
-// }
-
-// export const updateArtist = async (req, res) => {
-//   try {
-//     const { id } = req.params
-//     const artist = await Artist.findByIdAndUpdate(id, req.body)
-//     res.status(201).json(artist)
-
-//   } catch (error) {
-//     console.error(error)
-//     res.status(500).json({error: error.message})
-//   }
-// }
-
-// export const updateArtistName = async (req, res) => {
-//   try {
-//     const { name } = req.params
-//     const artist = await Artist.findOneAndUpdate({ name:  name}, req.body)
-//     res.status(201).json(artist)
-
-//   } catch (error) {
-//     console.error(error)
-//     res.status(500).json({error: error.message})
-//   }
-// }
-
-// export const deleteArtist = async (req, res) => {
-//   try {
-//     const { id } = req.params
-//     const deleted = await Artist.findByIdAndDelete(id)
-
-//     if (deleted) {
-//       return res.status(200).send("Artist deleted!")
-//     }
-
-//     throw new Error("Artist not found")
-    
-//   } catch (error) {
-//     console.error(error)
-//     res.status(500).json({error: error.message})
-//   }
-// }
-
-// export const deleteArtistName = async (req, res) => {
-//   try {
-//     const { name } = req.params
-//     const deleted = await Artist.findOneAndDelete({name: name})
-
-//     if (deleted) {
-//       return res.status(200).send("Artist deleted!")
-//     }
-
-//     throw new Error("Artist not found")
-    
-//   } catch (error) {
-//     console.error(error)
-//     res.status(500).json({error: error.message})
-//   }
-// }
-
-// // Albums
-
-// export const getAlbums = async (req, res) => {
-//   try {
-//     const albums = await Album.find()
-//     res.json(albums)
-
-//   } catch (error) {
-//     console.error(error)
-//     res.status(500).json({error: error.message})
-//   }
-// }
+export const deleteArtist = async (id) => {
+  try {
+    const response = await api.delete(`/artists/${id}`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
 
 
-// export const getAlbumTitle = async (req, res) => {
-//   try {
-//     const { title } = req.params
-//     const album = await Album.find({title: title})
+export const getAlbums = async () => {
+  try {
+    const response = await api.get("/albums");
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
 
-//     if (album) {
-//       return res.json(album)
-//     }
+export const getAlbum = async (id) => {
+  try {
+    const response = await api.get(`/album/${id}`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
 
-//     res.status(404).json({message: "Album not found!"})
-  
-//   } catch (error) {
-//     console.error(error)
-//     res.status(500).json({error: error.message})
-//   }
-// }
+export const createAlbum = async (albumData) => {
+  try {
+    const response = await api.post("/album", albumData);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
 
-// export const createAlbum = async (req, res) => {
-//   try {
-//     const album = new Album(req.body)
-//     await album.save()
-//     res.status(201).json(album)
+export const updateAlbum = async (id, albumData) => {
+  try {
+    const response = await api.put(`/artists/${id}`, albumData);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
 
-//   } catch (error) {
-//     console.error(error)
-//     res.status(500).json({error: error.message})
-//   }
-// }
+export const deleteAlbum = async (id) => {
+  try {
+    const response = await api.delete(`/albums/${id}`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
 
-// export const updateAlbum = async (req, res) => {
-//   try {
-//     const { id } = req.params
-//     const album = await Album.findByIdAndUpdate(id, req.body)
-//     res.status(201).json(album)
 
-//   } catch (error) {
-//     console.error(error)
-//     res.status(500).json({error: error.message})
-//   }
-// }
 
-// export const updateAlbumTitle = async (req, res) => {
-//   try {
-//     const { title } = req.params
-//     const album = await Album.findOneAndUpdate({ title:  title}, req.body)
-//     res.status(201).json(album)
 
-//   } catch (error) {
-//     console.error(error)
-//     res.status(500).json({error: error.message})
-//   }
-// }
-
-// export const deleteAlbum = async (req, res) => {
-//   try {
-//     const { id } = req.params
-//     const deleted = await Album.findByIdAndDelete(id)
-
-//     if (deleted) {
-//       return res.status(200).send("Album deleted!")
-//     }
-
-//     throw new Error("Album not found")
-    
-//   } catch (error) {
-//     console.error(error)
-//     res.status(500).json({error: error.message})
-//   }
-// }
-
-// export const deleteAlbumTitle = async (req, res) => {
-//   try {
-//     const { title } = req.params
-//     const deleted = await Album.findOneAndDelete({title: title})
-
-//     if (deleted) {
-//       return res.status(200).send("Album deleted!")
-//     }
-
-//     throw new Error("Album not found")
-    
-//   } catch (error) {
-//     console.error(error)
-//     res.status(500).json({error: error.message})
-//   }
-// }
