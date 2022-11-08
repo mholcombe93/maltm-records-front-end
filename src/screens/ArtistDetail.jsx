@@ -19,7 +19,7 @@ function ArtistDetail() {
     <div>
       <h1> {artist.name}</h1>
       <Link to={`/artists/${artist._id}/add-album`}>
-        <button className="addAlbumButton"> add album</button>
+        <button className="addAlbumButton"> add an album to your artist</button>
       </Link>
     </div>
   );
