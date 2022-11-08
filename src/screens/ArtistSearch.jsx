@@ -5,6 +5,8 @@ import "../App.css"
 import { Link } from "react-router-dom"
 
 
+
+
 function ArtistSearch({artists}) {
   const [searchTerm, setSearchTerm] = useState("");
 
