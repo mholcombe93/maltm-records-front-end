@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import ArtistImage from "../components/ArtistImage";
 import Searchbar from "../components/Searchbar";
-import { Link } from "react-router-dom";
 import "../App.css"
 
 
@@ -21,9 +20,7 @@ function ArtistSearch({ artists }) {
                 .includes(searchTerm.toLowerCase());
             })
             .map((artist, index) => (
-              <Link to={`/artistshgvkgcvkg`}> 
                 <ArtistImage key={index} artist={artist} />
-              </Link>
             ))}
         </div>
       </div>
