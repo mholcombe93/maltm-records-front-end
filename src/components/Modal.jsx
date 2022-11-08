@@ -1,20 +1,22 @@
 import "./styles/Modal.css"
 
-function Modal(props) {
-  if (!props.show) {
+function Modal({show, onClose, album}) {
+  if (!show) {
     return null
   }
   return (
-    <div className="modal" onClick={props.onClose}>
+    <div className="modal" onClick={onClose}>
       <div className="modal-content" onClick={e => e.stopPropagation()}>
         <div className="modal-header">
-          <h2 className="modal-title">{props.name}</h2>
+          <h2 className="modal-title">{album.title}</h2>
+          <p>{album.year}</p>
+          <img src={album.albumCover } />
         </div>
         <div className="modal-body">
         </div>
         
         <div className="modal-footer">
-          <button onClick={props.onClose} className="button">Close</button>
+          <button onClick={onClose} className="button">Close</button>
         </div>
       </div>
     </div>

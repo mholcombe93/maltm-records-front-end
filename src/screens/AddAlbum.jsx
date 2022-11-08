@@ -9,26 +9,34 @@ function AddAlbum() {
 
   const [album, setAlbum] = useState({
     title: "",
+    artist: artistID,
     albumCover: "",
     songs: [],
-    year: 0,
-    artist_id: artistID
+    year: 0
   })
 
   let navigate = useNavigate()
 
   const handleChange = (e) => {
     const { name, value } = e.target
+
+    if (name === "songs") {
+      setAlbum((prev) => ({
+        ...prev, 
+        [name]: [value]
+      }))
+    } else {
+      setAlbum((prev) => ({
+        ...prev,
+        [name]: value
+      }))
+    }
     
-    setAlbum((prev) => ({
-      ...prev,
-      [name]: value
-    }))
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await createAlbum (album)
+    await createAlbum(album)
     navigate(`/artists/${artistID}`, {replace: true})
   }
 
