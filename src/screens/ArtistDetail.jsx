@@ -4,6 +4,7 @@ import { getArtist } from "../services/artists.js";
 
 function ArtistDetail() {
   const [artist, setArtist] = useState({});
+  const [artistName, setArtistName] = useState("")
 
   const { artistID } = useParams();
 
@@ -11,14 +12,16 @@ function ArtistDetail() {
     const fetchArtist = async () => {
       const response = await getArtist(artistID);
       setArtist(response);
+      const res = await getArtist(artistName)
+      setArtistName(res)
     };
     fetchArtist();
   }, []);
 
   return (
     <div>
-      <h1>Artist Detail</h1>
-      <h1> {artist.name}</h1>
+      <h1>{artist.artistName}</h1>
+
       <Link to={`/artists/${artist._id}/add-album`}>
         <button className="addAlbumButton">add album</button>
       </Link>
