@@ -10,7 +10,7 @@ function AlbumCover ({album}) {
       <Modal
         onClose={() => setShowModal(false)}
         show={showModal}
-        name={album.title}
+          album={album}
         />
       </div>
     </>
