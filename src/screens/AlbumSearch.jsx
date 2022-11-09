@@ -62,7 +62,7 @@ function AlbumSearch({ albums }) {
             </div>
           ))}
         </div>
-     
+
 
         <Searchbar setSearchTerm={setSearchTerm} />
         <div className="gallery">
