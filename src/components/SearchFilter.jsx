@@ -51,6 +51,7 @@ const alphabet = [
     setCharacter(letter);
   };
 
+
   return alphabet.map((letter) => {
     return (
       <Link to={`/albums/search/${letter}`} >
