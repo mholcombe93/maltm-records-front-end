@@ -2,10 +2,10 @@ import "./styles/Home.css"
 
 function Home() {
   return (
-    <div className="artist-homepage-images">
-      <div className="artist-image">Featured</div>
-      <div className="artist-image">Random</div>
-    </div>
+    <>
+    <h1>B-SIDE MUSIC</h1>
+      <h1 className="artist-name">A database of lesser known musicians and artists.</h1>
+      </>
   )
 }
 
