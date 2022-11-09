@@ -2,7 +2,7 @@ import { useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 
-import { createAlbum , updateAlbum, getAlbum } from '../services/albums.js'
+import { deleteAlbum , updateAlbum, getAlbum } from '../services/albums.js'
 
 
 function EditAlbum() {
@@ -80,6 +80,12 @@ function EditAlbum() {
     />
     <button type="submit">Submit</button>
       </form>
+      <button onClick={() => {
+          deleteAlbum(album._id)
+          navigate("/album", {replace: true})
+        }}>
+          Delete Album
+        </button>
       </>
   )
 }
