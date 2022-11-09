@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import ArtistImage from "../components/ArtistImage";
 
 function GenreDetail({ artists }) {
   const [artistsList, setArtistsList] = useState([]);
@@ -9,22 +10,23 @@ function GenreDetail({ artists }) {
 
   useEffect(() => {
     let filteredList = artists.filter((artist) => {
-      console.log(artist.genre)
       return artist.genre.includes(genre_option)
     })
 
     setArtistsList(filteredList)
   }, [genre_option]);
 
-
+console.log(artists)
   return (
     <div>
         <h1 className="center">{genre_option}</h1>
-      {artistsList.map((artist) => (
-        <div>
-          <h2>{artist.name}</h2>
-        </div>
-      ))}
+        <div className="gallery">
+      {artistsList.map((artist, index) => (
+          <Link to={`/artists/${artist._id}`}> 
+          <ArtistImage key={index} artist={artist} />
+        </Link>
+          ))}
+          </div>
 
       <Link to='/genres'>
         <h2>Back to GENRES</h2>
