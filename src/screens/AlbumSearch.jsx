@@ -19,7 +19,7 @@ function AlbumSearch ({ albums }) {
                 .includes(searchTerm.toLowerCase());
             })
             .map((album) => (
-              <AlbumCover key={album._id} album={album} />
+              <AlbumCover key={album._id} album_id={album._id} />
             ))}
         </div>
       </div>
