@@ -40,6 +40,10 @@ flex-wrap: wrap;
 justify-content: center;
 }
 
+.gallery:hover {
+  cursor: pointer;
+}
+
 .genre{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
