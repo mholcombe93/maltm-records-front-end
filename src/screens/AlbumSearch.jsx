@@ -62,15 +62,6 @@ function AlbumSearch({ albums }) {
             </div>
           ))}
         </div>
-        {/* <div className="gallery">
-          {albums
-            .filter((album) => {
-              return album.title.split("")[0].includes(character);
-            })
-            .map((album) => (
-              <AlbumCover key={album._id} album_id={album._id} />
-              ))}
-        </div> */}
 
         <Searchbar setSearchTerm={setSearchTerm} />
         <div className="gallery">

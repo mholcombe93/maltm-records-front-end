@@ -50,7 +50,6 @@ const alphabet = [
     e.preventDefault();
     setCharacter(letter);
   };
-  console.log(handleClick);
 
   return alphabet.map((letter) => {
     return (
