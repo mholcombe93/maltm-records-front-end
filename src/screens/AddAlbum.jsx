@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 import { createAlbum } from '../services/albums.js'
 
-function AddAlbum() {
+function AddAlbum({setToggleApiCall}) {
 
   const { artistID } = useParams()
 
@@ -37,6 +37,7 @@ function AddAlbum() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     await createAlbum(album)
+    setToggleApiCall(prev => !prev)
     navigate(`/artists/${artistID}`, {replace: true})
   }
 
