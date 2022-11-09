@@ -53,4 +53,5 @@ function SearchFilter({ albums }) {
   });
 }
 
-export default SearchFilter;
+export default SearchFilter
+

@@ -1,12 +1,12 @@
-import { useState } from 'react'
+import { useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
-import { createAlbum } from '../services/albums.js'
 
-function AddAlbum() {
+import { deleteAlbum , updateAlbum, getAlbum } from '../services/albums.js'
 
+
+function EditAlbum() {
   const { artistID } = useParams()
-
   const [album, setAlbum] = useState({
     title: "",
     artist: artistID,
@@ -16,6 +16,16 @@ function AddAlbum() {
   })
 
   let navigate = useNavigate()
+  let { id } = useParams()
+
+  useEffect(() => {
+    const fetchAlbum = async () => {
+      let oneAlbum = await getAlbum(id)
+      setAlbum(oneAlbum)
+    }
+  
+    fetchAlbum()
+  }, [id])
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -36,13 +46,13 @@ function AddAlbum() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await createAlbum(album)
+    await updateAlbum(album)
     navigate(`/artists/${artistID}`, {replace: true})
   }
 
   return (
-  <>
-    <h1> Add Album</h1>
+    <>
+    <h1>Edit Album</h1>
     <form onSubmit={handleSubmit}>
     <input
       placeholder="Enter Title"
@@ -70,8 +80,14 @@ function AddAlbum() {
     />
     <button type="submit">Submit</button>
       </form>
+      <button onClick={() => {
+          deleteAlbum(album._id)
+          navigate("/album", {replace: true})
+        }}>
+          Delete Album
+        </button>
       </>
   )
 }
 
-export default AddAlbum
+export default EditAlbum
