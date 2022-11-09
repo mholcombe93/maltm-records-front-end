@@ -64,7 +64,6 @@ justify-content: center;
   height: 200px;
   cursor: pointer;
   color: white;
-  /* background-color: black; */
   border: 1px black solid;
   -webkit-box-shadow: 10px 10px 23px 4px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 10px 23px 4px rgba(0,0,0,0.75);
@@ -73,9 +72,14 @@ justify-content: center;
 
 
 @media only screen and (max-width: 600px) {
-
-      .gallery-pic {
+  .genre{
+    display: flex;
+    flex-wrap: wrap;
+  }
+   
+      .genre-gallery {
         height: 100px;
+        
       }
 
 }
