@@ -16,9 +16,10 @@ input {
   text-align: center;
 }
 
-.addAlbumButton {
+.crudButton {
   height: 40px;
   font-size: 30px;
+  margin: 5px;
 }
 
 .gallery{
@@ -37,7 +38,6 @@ justify-content: center;
 .gallery-pic {
   margin: 5px;
   height: 250px;
-  cursor: pointer;
   border: 1px black solid;
   -webkit-box-shadow: 10px 10px 23px 4px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 10px 23px 4px rgba(0,0,0,0.75);
