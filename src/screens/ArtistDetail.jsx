@@ -38,6 +38,10 @@ function ArtistDetail() {
       <Link to={`/artists/${artist._id}/add-album`}>
         <button className="crudButton">Add Album</button>
       </Link>
+
+      <Link to="/artists">
+        <h2>Back to ARTISTS</h2>
+      </Link>
       
     </div>
   );
