@@ -21,7 +21,7 @@ function About() {
 
       <div className="bio">
         <div className="bio-photo"></div>
-        <div className="bio-content"><h3>Matthew Holcombe</h3><p>Lorem ispum biography content. Chckout Git Hub and LinkedIn they are cool, I'd hire them and pay them a lot of money if I were the boss.</p></div>
+        <div className="bio-content"><h3>Matthew Holcombe</h3><p>Software developer, lighting designer, and red panda enthusisit. Chckout Git Hub and LinkedIn they are cool, I'd hire them and pay them a lot of money if I were the boss.</p></div>
       </div>
 
       <div className="bio">
