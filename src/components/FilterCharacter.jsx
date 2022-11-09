@@ -3,27 +3,29 @@ import SearchFilter from "./SearchFilter";
 import AlbumCover from "./AlbumCover";
 import { useEffect, useState } from "react";
 
-function FilterCharacter({letter, albums}) {
-  const { character } = useParams
+function FilterCharacter({albums}) {
+  const { letter } = useParams()
   const [albumsList, setAlbumsList] = useState([]);
 
   useEffect(() => {
  
     let filteredList = albums.filter((album) => {
-        return album.title.split("")[0].includes(character);
+        return album.title.split("")[0].includes(letter);
       });
 
       setAlbumsList(filteredList);
-    }, [character]);
+    }, [letter]);
   
   return (
     <div>
+      <div className="alpha">
       <SearchFilter/>
-      <h1>Albums starting with {character}</h1>
+      </div>
+      <h1 className="center">Albums starting with {letter}</h1>
       <br></br>
      <div className="gallery">
           {albumsList.map((album) => (
-              <AlbumCover key={album._id} album={album} />
+              <AlbumCover key={album._id} album_id={album._id} />
               ))}
         </div>
     </div>
