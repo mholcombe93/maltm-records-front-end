@@ -1,13 +1,13 @@
 import "./styles/Home.css"
-import InfiniteCarousel from 'react-leaf-carousel';
-import ArtistImage from "../components/ArtistImage";
+// import InfiniteCarousel from 'react-leaf-carousel';
+// import ArtistImage from "../components/ArtistImage";
 
 function Home({artists}) {
   return (
     <>
     <h1>B-SIDE MUSIC</h1>
       <h1 className="artist-name">A database of lesser known musicians and artists.</h1>
-      <InfiniteCarousel
+      {/* <InfiniteCarousel
         breakpoints={[
           {
             breakpoint: 500,
@@ -33,10 +33,10 @@ function Home({artists}) {
         scrollOnDevice={true}
       >
         <div className="carousel-images">
-          {/* {artists.map((artist, index) => (
-            <ArtistImage key={index} artist={artist} />))} */}
+          {artists.map((artist, index) => (
+            <ArtistImage key={index} artist={artist} />))}
         </div>
-      </InfiniteCarousel>
+      </InfiniteCarousel> */}
     </>
   )
 }

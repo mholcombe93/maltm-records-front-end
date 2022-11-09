@@ -9,6 +9,8 @@
   text-align: center;
   align-items: center;
   justify-content: center;
+  backdrop-filter: blur(.15rem);
+  /* box-shadow: -24.7rem 0rem 1.1rem .35rem rgba(247, 5, 5, 0.127) inset; */
 }
 
 ul {
@@ -27,6 +29,7 @@ li{
   padding: 10px;
   background-color: white;
   text-align: center;
+  color: black;
 }
 
 .modal-body {
