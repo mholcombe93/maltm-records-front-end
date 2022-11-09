@@ -73,7 +73,7 @@ function EditAlbum() {
       </form>
       <button onClick={async () => {
           await deleteAlbum(album._id)
-          navigate("/album", {replace: true})
+          navigate("/albums", {replace: true})
         }}>
           Delete Album
         </button>
