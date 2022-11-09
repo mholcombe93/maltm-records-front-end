@@ -2,6 +2,7 @@
 body {
   text-align: center;
   background-color: rgb(165, 211, 219);
+  font-family: 'Londrina Solid', cursive;
 }
 
 input {
@@ -15,6 +16,11 @@ input {
   font-family: 'Londrina Solid', cursive;
   text-align: center;
   padding: 0;
+}
+
+.artist-bio-container{
+width: 400px;
+text-align: center;
 }
 
 .crudButton {
@@ -59,6 +65,7 @@ justify-content: center;
   -moz-box-shadow: 10px 10px 23px 4px rgba(0,0,0,0.75);
   box-shadow: 10px 10px 23px 4px rgba(0,0,0,0.75);
 }
+
 
 @media only screen and (max-width: 600px) {
 

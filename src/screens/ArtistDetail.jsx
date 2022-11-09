@@ -30,8 +30,9 @@ function ArtistDetail() {
       <div>
         <img src={artist.artistImg} className="gallery-pic" />
       </div>
-      <div>
-        <p>{artist.bio}</p>
+      
+      <div className="gallery">
+      <p className="center">{artist.bio}</p>
       </div>
 
       <Link to={`/artists/${artist._id}/add-album`}>

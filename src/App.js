@@ -8,7 +8,9 @@ import Genres from "./screens/Genres";
 import SearchFilter from "./components/SearchFilter";
 import GenreDetail from "./screens/GenreDetail";
 import ArtistDetail from "./screens/ArtistDetail";
+import FilterCharacter from "./components/FilterCharacter";
 import AddAlbum from "./screens/AddAlbum.jsx";
+// import FilterCharacter from "./components/FilterCharacter";
 import EditAlbum from "./screens/EditAlbum";
 import React, { useState, useEffect } from "react";
 import { Routes, Route, useParams } from "react-router-dom";
@@ -46,11 +48,20 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/albums/search" element={<SearchFilter />} />
 
-        {/* <Route path="/albums/search/:character" element={<FilterCharacter />} /> */}
+
+        <Route path="/albums/search/:letter" element={<FilterCharacter albums={albums} />} />
 
         <Route path="/genre/:genre_option" element={<GenreDetail artists={artists} />} />
         <Route path= "/artists/:artistID/add-album" element = {<AddAlbum/>} />
 
+        <Route
+          path="/genre/:genre_option"
+          element={<GenreDetail artists={artists} />}
+        />
+        <Route path="/artists/:artistID/add-album" element={<AddAlbum />} />
+
+
+       /* <Route path="/artists/:artistID/edit-album" element={<EditAlbum />} /> */
 
         <Route path="/artists/edit-album/:albumID" element={<EditAlbum />} />
 

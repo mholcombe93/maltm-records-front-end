@@ -11,12 +11,12 @@ function About() {
 
       <div className="bio">
         <div className="bio-photo"></div>
-        <div className="bio-content"><h3>Lauren Powers</h3><p>Software Engineer, CSS Queen, travel enthusiast. Checkout <a href="https://github.com/laurenpowers20" target="_blank">Git Hub</a> and <a href="https://www.linkedin.com/in/lauren-powers20/" target="_blank">LinkedIn</a> they are cool, I'd hire them and pay them a lot of money if I were the boss.</p></div>
+        <div className="bio-content"><h3>Lauren Powers</h3><p>Software Engineer, CSS Queen, travel enthusiast. Checkout <a className="bio-link" href="https://github.com/laurenpowers20" target="_blank">Git Hub</a> and <a className="bio-link"href="https://www.linkedin.com/in/lauren-powers20/" target="_blank">LinkedIn</a> She's cool, I'd hire her and pay her a lot of money if I were the boss.</p></div>
       </div>
 
       <div className="bio">
         <div className="bio-photo"></div>
-        <div className="bio-content"><h3>Malik Washington</h3><p>Software Engineer, people person, music enthusiast. Checkout<a href="https://github.com/malikwashington" target="_blank">Git Hub</a> and <a href="https://www.linkedin.com/in/malikwashington/" target="_blank">LinkedIn</a> they are cool, I'd hire them and pay them a lot of money if I were the boss.</p></div>
+        <div className="bio-content"><h3>Malik Washington</h3><p>Software Engineer, people person, professional musician. Checkout<a className="bio-link" href="https://github.com/malikwashington" target="_blank">Git Hub</a> and <a className="bio-link" href="https://www.linkedin.com/in/malikwashington/" target="_blank">LinkedIn</a> </p></div>
       </div>
 
       <div className="bio">
