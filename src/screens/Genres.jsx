@@ -7,7 +7,7 @@ function Genres() {
       <h1>Genres</h1>
       <div className="gallery">
         <section className="genre">
-          <Link to={"/genre/RnB"}>
+          <Link to={"/genre/R&B"}>
             <div className="genre-gallery RnB">R&B</div>
           </Link>
           <Link to={"/genre/Soul"}>
