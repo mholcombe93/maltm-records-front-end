@@ -32,7 +32,7 @@ function ArtistDetail() {
       </div>
       
       <div className="gallery">
-      <p className="center">{artist.bio}</p>
+      <p className="center bio">{artist.bio}</p>
       </div>
 
       <Link to={`/artists/${artist._id}/add-album`}>

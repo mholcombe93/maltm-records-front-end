@@ -79,6 +79,10 @@ justify-content: center;
       }
 
 }
+
+.bio{
+  font-size: 2em;
+}
 .center{
   text-align: center;
 }
