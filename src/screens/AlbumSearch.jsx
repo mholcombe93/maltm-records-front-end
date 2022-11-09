@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import AlbumCover from "../components/AlbumCover.jsx";
 import Searchbar from "../components/Searchbar";
 import "../App.css";
 
 function AlbumSearch({ albums }) {
   const [searchTerm, setSearchTerm] = useState("");
-  const [character, setCharacter] = useState();
+  let navigate = useNavigate()
   const alphabet = [
     "A",
     "B",
@@ -47,7 +48,7 @@ function AlbumSearch({ albums }) {
 
   const handleClick = (e, letter) => {
     e.preventDefault();
-    setCharacter(letter);
+    navigate(`/albums/search/${letter}`);
   };
 
   return (
@@ -55,22 +56,21 @@ function AlbumSearch({ albums }) {
       <div>
         <h1>Albums</h1>
         <div className="alpha">
-          {console.log(character)}
           {alphabet.map((letter) => (
             <div className="alphabet" onClick={(e) => handleClick(e, letter)}>
               {letter}
             </div>
           ))}
         </div>
-        <div className="gallery">
+        {/* <div className="gallery">
           {albums
             .filter((album) => {
               return album.title.split("")[0].includes(character);
             })
             .map((album) => (
-              <AlbumCover key={album._id} album={album} />
-            ))}
-        </div>
+              <AlbumCover key={album._id} album_id={album._id} />
+              ))}
+        </div> */}
 
         <Searchbar setSearchTerm={setSearchTerm} />
         <div className="gallery">

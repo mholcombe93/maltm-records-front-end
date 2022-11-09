@@ -29,7 +29,7 @@ export const createAlbum = async (albumData) => {
 
 export const updateAlbum = async (id, albumData) => {
   try {
-    const response = await api.put(`/artists/${id}`, albumData);
+    const response = await api.put(`/albums/${id}`, albumData);
     return response.data;
   } catch (error) {
     throw error;
