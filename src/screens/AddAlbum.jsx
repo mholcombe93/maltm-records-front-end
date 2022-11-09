@@ -41,6 +41,8 @@ function AddAlbum() {
   }
 
   return (
+  <>
+    <h1> Add Album</h1>
     <form onSubmit={handleSubmit}>
     <input
       placeholder="Enter Title"
@@ -67,7 +69,8 @@ function AddAlbum() {
       onChange={handleChange}
     />
     <button type="submit">Submit</button>
-  </form>
+      </form>
+      </>
   )
 }
 

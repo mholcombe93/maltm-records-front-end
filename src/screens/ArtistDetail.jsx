@@ -22,7 +22,7 @@ function ArtistDetail() {
   return (
     <div>
       <h1 className="artist-name">{artist.name}</h1>
-     <p>{artist.genre}</p>
+      <p>{artist.genre}</p>
       <div>
         <img src={artist.artistImg} className="gallery-pic" />
         </div>
@@ -30,7 +30,10 @@ function ArtistDetail() {
       
 
       <Link to={`/artists/${artist._id}/add-album`}>
-        <button className="addAlbumButton">add album</button>
+        <button className="crudButton">Add Album</button>
+      </Link>
+      <Link to={`/artists/${artist._id}/delete-album`}>
+        <button className="crudButton">Delete Album</button>
       </Link>
     </div>
   );
