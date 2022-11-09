@@ -15,7 +15,7 @@ a:hover {
 
 .nav-bar-component {
   width: 100%;
-  background-color: aquamarine;
+  background-color: rgb(174, 174, 203);
   border-bottom: 3px solid black;
 }
 
@@ -23,7 +23,7 @@ h1 {
   font-family: 'Londrina Shadow', cursive;
   font-size: 70px;
   margin: 0;
-  padding: 20px;
+  padding: 10px;
   text-align: left;
 }
 

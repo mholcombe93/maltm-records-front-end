@@ -11,6 +11,18 @@ input {
   margin: 10px;
 }
 
+.artist-name {
+  font-family: 'Londrina Solid', cursive;
+  text-align: center;
+  padding: 0;
+}
+
+.crudButton {
+  height: 40px;
+  font-size: 30px;
+  margin: 5px;
+}
+
 .gallery{
 display: flex;
 flex-wrap: wrap;
@@ -27,7 +39,6 @@ justify-content: center;
 .gallery-pic {
   margin: 5px;
   height: 250px;
-  cursor: pointer;
   border: 1px black solid;
   -webkit-box-shadow: 10px 10px 23px 4px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 10px 23px 4px rgba(0,0,0,0.75);
@@ -59,3 +70,16 @@ justify-content: center;
 .center{
   text-align: center;
 }
+
+.alpha{
+    font-size: 30px;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    margin-top: 0;
+    justify-content: center;
+  }
+
+  .alphabet{
+    padding: 5px;
+  }
