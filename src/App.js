@@ -10,6 +10,7 @@ import GenreDetail from "./screens/GenreDetail";
 import ArtistDetail from "./screens/ArtistDetail";
 import AddAlbum from "./screens/AddAlbum.jsx";
 import DeleteAlbum from "./screens/DeleteAlbum";
+import EditAlbum from "./screens/EditAlbum";
 import React, { useState, useEffect } from "react";
 import { Routes, Route, useParams } from "react-router-dom";
 import { getArtists } from "./services/artists.js";
@@ -54,6 +55,7 @@ function App() {
           path="/artists/:artistID/delete-album"
           element={<DeleteAlbum />}
         />
+        <Route path="/artists/:artistID/edit-album" element={<EditAlbum />} />
       </Routes>
     </>
   );
