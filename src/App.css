@@ -64,7 +64,6 @@ justify-content: center;
   height: 200px;
   cursor: pointer;
   color: white;
-  /* background-color: black; */
   border: 1px black solid;
   -webkit-box-shadow: 10px 10px 23px 4px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 10px 23px 4px rgba(0,0,0,0.75);
@@ -73,9 +72,16 @@ justify-content: center;
 
 
 @media only screen and (max-width: 600px) {
-
-      .gallery-pic {
+  .genre{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .gallery-pic {
+    height: 100px;
+  }
+      .genre-gallery {
         height: 100px;
+        
       }
 
 }
@@ -102,60 +108,84 @@ justify-content: center;
 
   .RnB{
 background-image: url(../public/music/R&B.jpg);
-background-size: 100%
+background-size: 100%;
+background-repeat: no-repeat;
+background-size: cover;
   }
 
   .Soul{
 background: url(../public/music/Soul.jpg);
-background-size: 100%
+background-size: 100%;
+background-repeat: no-repeat;
+background-size: cover;
   }
 
   .Alt{
 background: url(../public/music/alternative-music-venues-London.jpg);
-background-size: 100%
+background-size: 100%;
+background-repeat: no-repeat;
+background-size: cover;
   }
 
   .Rock{
 background: url(../public/music/Rock.jpg);
-background-size: 100%
+background-size: 100%;
+background-repeat: no-repeat;
+background-size: cover;
   }
 
   .K{
 background: url(../public/music/kpop.jpg);
-background-size: 100%
+background-size: 100%;
+background-repeat: no-repeat;
+background-size: cover;
   }
 
   .Punk{
 background: url(../public/music/RockBand2.webp);
-background-size: 100%
+background-size: 100%;
+background-repeat: no-repeat;
+background-size: cover;
   }
 
   .Hip-Hop{
 background: url(../public/music/Hip.jpeg);
-background-size: 100%
+background-size: 100%;
+background-repeat: no-repeat;
+background-size: cover;
   }
   .Rap{
 background: url(../public/music/Rap.jpg);
-background-size: 100%
+background-size: 100%;
+background-repeat: no-repeat;
+background-size: cover;
   }
 
   .Pop{
 background: url(../public/music/Pop.jpg);
-background-size: 100%
+background-size: 100%;
+background-repeat: no-repeat;
+background-size: cover;
   }
 
   .Elec{
 background: url(../public/music/best-edm-songs-2019.jpg);
-background-size: 100%
+background-size: 100%;
+background-repeat: no-repeat;
+background-size: cover;
   }
   
   .Jazz{
 background: url(../public/music/Jazz.jpg);
-background-size: 100%
+background-size: 100%;
+background-repeat: no-repeat;
+background-size: cover;
   }
 
   .EDM{ 
 background: url(../public/music/edm.webp);
-background-size: 100%
+background-size: 100%;
+background-repeat: no-repeat;
+background-size: cover;
   }
  
