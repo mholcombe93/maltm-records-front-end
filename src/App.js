@@ -10,7 +10,6 @@ import GenreDetail from "./screens/GenreDetail";
 import ArtistDetail from "./screens/ArtistDetail";
 import FilterCharacter from "./components/FilterCharacter";
 import AddAlbum from "./screens/AddAlbum.jsx";
-// import FilterCharacter from "./components/FilterCharacter";
 import EditAlbum from "./screens/EditAlbum";
 import React, { useState, useEffect } from "react";
 import { Routes, Route, useParams } from "react-router-dom";
