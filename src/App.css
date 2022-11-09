@@ -1,15 +1,20 @@
 
 body {
   text-align: center;
-  background-color: rgb(165, 211, 219);
+  background-color: black;
+  color:white;
   font-family: 'Londrina Solid', cursive;
 }
 
 input {
   width: 300px;
-  height: 30px;
+  height: 10px;
   color: black;
   margin: 10px;
+  border-radius: 25px;
+  border: 2px solid white;
+  padding: 20px;
+
 }
 
 .artist-name {
@@ -48,7 +53,7 @@ justify-content: center;
   border: 1px black solid;
   -webkit-box-shadow: 10px 10px 23px 4px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 10px 23px 4px rgba(0,0,0,0.75);
-  box-shadow: 10px 10px 23px 4px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 23px 4px rgba(48, 47, 47, 0.75);
 }
 .genre-gallery {
   display: flex;
