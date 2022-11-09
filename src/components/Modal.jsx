@@ -1,5 +1,5 @@
 import "./styles/Modal.css"
-
+import { Link } from 'react-router-dom'
 function Modal({show, onClose, album}) {
   if (!show) {
     return null
@@ -19,6 +19,9 @@ function Modal({show, onClose, album}) {
             })}
           </ul>
           </div>
+          <Link to={`/artists/edit-album/${album._id}`}>
+            <button className="crudButton">Edit/Delete Album</button>
+          </Link>
         </div>
         <div className="modal-footer">
           <button onClick={onClose} className="button">Close</button>

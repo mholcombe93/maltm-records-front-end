@@ -6,48 +6,39 @@ import { deleteAlbum , updateAlbum, getAlbum } from '../services/albums.js'
 
 
 function EditAlbum() {
-  const { artistID } = useParams()
   const [album, setAlbum] = useState({
     title: "",
-    artist: artistID,
+    artist: "",
     albumCover: "",
     songs: [],
     year: 0
   })
-
+  
+  const {  albumID  } = useParams()
   let navigate = useNavigate()
-  let { id } = useParams()
 
   useEffect(() => {
     const fetchAlbum = async () => {
-      let oneAlbum = await getAlbum(id)
+      let oneAlbum = await getAlbum(albumID)
       setAlbum(oneAlbum)
     }
   
     fetchAlbum()
-  }, [id])
+  }, [albumID])
 
   const handleChange = (e) => {
     const { name, value } = e.target
 
-    if (name === "songs") {
-      setAlbum((prev) => ({
-        ...prev, 
-        [name]: [value]
-      }))
-    } else {
       setAlbum((prev) => ({
         ...prev,
         [name]: value
       }))
-    }
-    
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await updateAlbum(album)
-    navigate(`/artists/${artistID}`, {replace: true})
+    await updateAlbum(album._id, album)
+    navigate(`/artists/${album.artist._id}`, {replace: true})
   }
 
   return (
@@ -66,12 +57,12 @@ function EditAlbum() {
       value={album.albumCover}
       onChange={handleChange}
     />
-    <input
+    {/* <input
       placeholder="Enter song"
       name="songs"
       value={album.songs}
       onChange={handleChange}
-    />
+    /> */}
     <input
       placeholder="Enter Year"
       name="year"
@@ -80,9 +71,9 @@ function EditAlbum() {
     />
     <button type="submit">Submit</button>
       </form>
-      <button onClick={() => {
-          deleteAlbum(album._id)
-          navigate("/album", {replace: true})
+      <button onClick={async () => {
+          await deleteAlbum(album._id)
+          navigate("/albums", {replace: true})
         }}>
           Delete Album
         </button>
