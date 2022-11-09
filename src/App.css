@@ -76,7 +76,9 @@ justify-content: center;
     display: flex;
     flex-wrap: wrap;
   }
-   
+  .gallery-pic {
+    height: 100px;
+  }
       .genre-gallery {
         height: 100px;
         
