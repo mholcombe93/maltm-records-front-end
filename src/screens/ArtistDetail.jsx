@@ -21,7 +21,6 @@ function ArtistDetail() {
      <p>{artist.genre}</p>
       <div>
         <img src={artist.artistImg} className="gallery-pic" />
-       
         </div>
         
       
