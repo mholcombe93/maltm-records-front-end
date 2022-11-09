@@ -35,41 +35,20 @@ function SearchFilter({ albums }) {
     "Z",
     "#",
   ];
-  let arr = [];
+
   const handleClick = (e, letter) => {
     e.preventDefault();
-    setCharacter(letter)
-    // albums.filter((album) => {
-    //   if (
-    //     album.title.split("")[0].toLowerCase().includes(letter.toLowerCase())
-    //   ) {
-    //     arr.push(album);
-
-    //     arr.map((album) => <AlbumCover key={album._id} album={album} />);
-    //   }
-    // });
+    setCharacter(letter);
   };
+  console.log(handleClick);
 
   return alphabet.map((letter) => {
     return (
-      <div className="alphabet" onClick={(e) => handleClick(e, letter)}>
-        {letter}
-
-        <div className="gallery">
-          {albums.filter((album) => {
-            if (
-              album.title
-                .split("")[0]
-                .toUpperCase()
-                .includes(character)
-            ) {
-              // arr.push(album);
-              console.log(album)
-              arr.map((album) => (<AlbumCover key={album._id} album={album} />))
-            }
-          })}
+      <Link to={`/albums/search/${letter}`} letter={character} albums={albums}>
+        <div className="alphabet" onClick={(e) => handleClick(e, letter)}>
+          {letter}
         </div>
-      </div>
+      </Link>
     );
   });
 }

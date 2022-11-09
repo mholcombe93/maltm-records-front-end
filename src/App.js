@@ -50,7 +50,7 @@ function App() {
         <Route path="/about" element={<About />} />
 
         <Route path="/albums/search" element={<SearchFilter />} />
-        <Route path="/albums/search/:character" element={<SearchFilter />} />
+        <Route path="/albums/search/:character" element={<FilterCharacter />} />
 
         <Route path="/genre/:genre_option" element={<GenreDetail artists={artists} />} />
         <Route path= "/artists/:artistID/add-album" element = {<AddAlbum/>} />
