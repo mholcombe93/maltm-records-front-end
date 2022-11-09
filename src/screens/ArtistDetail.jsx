@@ -33,10 +33,7 @@ function ArtistDetail() {
         <button className="crudButton">Add Album</button>
       </Link>
       <Link to={`/artists/${artist._id}/edit-album`}>
-        <button className="crudButton">Edit Album</button>
-      </Link>
-      <Link to={`/artists/${artist._id}/delete-album`}>
-        <button className="crudButton">Delete Album</button>
+        <button className="crudButton">Edit/Delete Album</button>
       </Link>
     </div>
   );

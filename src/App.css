@@ -14,6 +14,7 @@ input {
 .artist-name {
   font-family: 'Londrina Solid', cursive;
   text-align: center;
+  padding: 0;
 }
 
 .crudButton {

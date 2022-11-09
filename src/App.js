@@ -9,7 +9,6 @@ import SearchFilter from "./components/SearchFilter";
 import GenreDetail from "./screens/GenreDetail";
 import ArtistDetail from "./screens/ArtistDetail";
 import AddAlbum from "./screens/AddAlbum.jsx";
-import DeleteAlbum from "./screens/DeleteAlbum";
 import EditAlbum from "./screens/EditAlbum";
 import React, { useState, useEffect } from "react";
 import { Routes, Route, useParams } from "react-router-dom";
@@ -51,10 +50,6 @@ function App() {
           element={<GenreDetail artists={artists} />}
         />
         <Route path="/artists/:artistID/add-album" element={<AddAlbum />} />
-        <Route
-          path="/artists/:artistID/delete-album"
-          element={<DeleteAlbum />}
-        />
         <Route path="/artists/:artistID/edit-album" element={<EditAlbum />} />
       </Routes>
     </>
