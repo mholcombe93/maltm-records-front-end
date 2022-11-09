@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getArtist } from "../services/artists";
 import { Link } from "react-router-dom";
 
 function GenreDetail({ artists }) {
@@ -23,12 +22,12 @@ function GenreDetail({ artists }) {
         <h1 className="center">{genre_option}</h1>
       {artistsList.map((artist) => (
         <div>
-          <h1>{artist.name}</h1>
+          <h2>{artist.name}</h2>
         </div>
       ))}
 
       <Link to='/genres'>
-        <h1>Back to GENRES</h1>
+        <h2>Back to GENRES</h2>
       </Link>
     </div>
   )
