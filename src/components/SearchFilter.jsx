@@ -5,6 +5,7 @@ import FilterCharacter from "./FilterCharacter";
 import AlbumCover from "./AlbumCover";
 
 function SearchFilter({ albums }) {
+
   const [character, setCharacter] = useState();
   const alphabet = [
     "A",
