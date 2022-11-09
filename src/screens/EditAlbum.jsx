@@ -1,7 +1,7 @@
 import { useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
-import { createAlbum , updateAlbum } from '../services/albums.js'
+import { createAlbum , updateAlbum , getAlbum } from '../services/albums.js'
 
 function EditAlbum() {
 
@@ -46,7 +46,7 @@ function EditAlbum() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await editAlbum(album)
+    await updateAlbum(album)
     navigate(`/artists/${artistID}`, {replace: true})
   }
 
