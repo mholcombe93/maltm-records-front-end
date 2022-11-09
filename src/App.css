@@ -59,3 +59,15 @@ justify-content: center;
 .center{
   text-align: center;
 }
+
+.alpha{
+    font-size: 30px;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+
+  .alphabet{
+    padding: 5px;
+  }
