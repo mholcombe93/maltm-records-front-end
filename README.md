@@ -11,15 +11,6 @@ This is a front-end deployed website using an [API by the MALTM Records Team.](h
 ## CRUD Functionality
 This site allows form the addition, deletion, and edit of an artist or album through our admin verification system.
 
-* GET 
- (get) get all Queens = /
-  (get) get a Queen with _id= /:id
-  (get) get a Queen wtih name = /name/:name
-  (get) get a Queen with order number = /order/:order
-  (post) add a Queen = /
-  (put) update a Queen = /:id
-  (delete) remove a Queen = /:id
-#
 
 ## Additional Programs and Depenencies 
 This is a [REACT](https://reactjs.org/) based website hosted on [Netlify](https://netlify.com/). No other programs or dep
@@ -37,5 +28,5 @@ This is a [REACT](https://reactjs.org/) based website hosted on [Netlify](https:
 [Tashon Forrester](https://github.com/tashonvictoria)
 ##### Front-End: 
 [Lauren Powers](https://github.com/laurenpowers20), 
-[Matthew Holcombe](https://github.com/mholcombe93), [Malik Washington]()
+[Matthew Holcombe](https://github.com/mholcombe93), [Malik Washington](https://github.com/mallikwashington)
 
