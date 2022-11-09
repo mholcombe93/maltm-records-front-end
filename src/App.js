@@ -10,10 +10,12 @@ import GenreDetail from "./screens/GenreDetail";
 import ArtistDetail from "./screens/ArtistDetail";
 import AddAlbum from "./screens/AddAlbum.jsx";
 import EditAlbum from "./screens/EditAlbum";
+import { FilterCharacter } from "./components/FilterCharacter.jsx";
 import React, { useState, useEffect } from "react";
 import { Routes, Route, useParams } from "react-router-dom";
 import { getArtists } from "./services/artists.js";
 import { getAlbums } from "./services/albums.js";
+
 
 function App() {
   const [artists, setArtists] = useState([]);
@@ -45,7 +47,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/albums/search" element={<SearchFilter />} />
 
-        <Route path="/albums/search/:character" element={<FilterCharacter />} />
+        {/* <Route path="/albums/search/:character" element={<FilterCharacter />} /> */}
 
         <Route path="/genre/:genre_option" element={<GenreDetail artists={artists} />} />
         <Route path= "/artists/:artistID/add-album" element = {<AddAlbum/>} />
