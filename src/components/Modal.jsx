@@ -1,5 +1,5 @@
 import "./styles/Modal.css"
-
+import { Link } from 'react-router-dom'
 function Modal({show, onClose, album}) {
   if (!show) {
     return null
@@ -10,20 +10,19 @@ function Modal({show, onClose, album}) {
       <div className="modal-content" onClick={e => e.stopPropagation()}>
         <div className="modal-header">
           <h1>{album.artist.name}</h1>
-          <h2 className="modal-title">{album.title}</h2>
-          <p>{album.year}</p>
-          <div className="track-list"> Track List
+          <h2 className="album-title">{album.title}</h2>
+          <p className="album-year">{album.year}</p>
+          <div className="track-list"> Track List:
           <ul>
             {album.songs.map((song) => {
               return <li>{song}</li>
             })}
           </ul>
           </div>
+          <Link to={`/artists/edit-album/${album._id}`}>
+            <button className="crudButton">Edit/Delete Album</button>
+          </Link>
         </div>
-        <div className="modal-body">
-        <img className="gallery-pic" src={album.albumCover } />
-        </div>
-        
         <div className="modal-footer">
           <button onClick={onClose} className="button">Close</button>
         </div>

@@ -30,16 +30,15 @@ function ArtistDetail() {
       <div>
         <img src={artist.artistImg} className="gallery-pic" />
       </div>
-      <div>
-        <p>{artist.bio}</p>
+      
+      <div className="gallery">
+      <p className="center">{artist.bio}</p>
       </div>
 
       <Link to={`/artists/${artist._id}/add-album`}>
         <button className="crudButton">Add Album</button>
       </Link>
-      <Link to={`/artists/${artist._id}/edit-album`}>
-        <button className="crudButton">Edit/Delete Album</button>
-      </Link>
+      
     </div>
   );
 }
