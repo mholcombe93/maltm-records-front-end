@@ -8,7 +8,7 @@ function Genres() {
       <div className="gallery">
         <section className="genre">
           <Link to={"/genre/RnB"}>
-            <div className="genre-gallery R&B">R&B</div>
+            <div className="genre-gallery RnB">R&B</div>
           </Link>
           <Link to={"/genre/Soul"}>
             <div className="genre-gallery Soul">Soul</div>

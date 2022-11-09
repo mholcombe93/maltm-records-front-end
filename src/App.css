@@ -64,7 +64,7 @@ justify-content: center;
   height: 200px;
   cursor: pointer;
   color: white;
-  background-color: black;
+  /* background-color: black; */
   border: 1px black solid;
   -webkit-box-shadow: 10px 10px 23px 4px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 10px 23px 4px rgba(0,0,0,0.75);
@@ -95,3 +95,63 @@ justify-content: center;
   .alphabet{
     padding: 5px;
   }
+
+  .RnB{
+background-image: url(../public/music/R&B.jpg);
+background-size: 100%
+  }
+
+  .Soul{
+background: url(../public/music/Soul.jpg);
+background-size: 100%
+  }
+
+  .Alt{
+background: url(../public/music/alternative-music-venues-London.jpg);
+background-size: 100%
+  }
+
+  .Rock{
+background: url(../public/music/Rock.jpg);
+background-size: 100%
+  }
+
+  .K{
+background: url(../public/music/kpop.jpg);
+background-size: 100%
+  }
+
+  .Punk{
+background: url(../public/music/RockBand2.webp);
+background-size: 100%
+  }
+
+  .Hip-Hop{
+background: url(../public/music/Hip.jpeg);
+background-size: 100%
+  }
+  .Rap{
+background: url(../public/music/Rap.jpg);
+background-size: 100%
+  }
+
+  .Pop{
+background: url(../public/music/Pop.jpg);
+background-size: 100%
+  }
+
+  .Elec{
+background: url(../public/music/best-edm-songs-2019.jpg);
+background-size: 100%
+  }
+  
+  .Jazz{
+background: url(../public/music/Jazz.jpg);
+background-size: 100%
+  }
+
+  .EDM{ 
+background: url(../public/music/edm.webp);
+background-size: 100%
+  }
+ 
