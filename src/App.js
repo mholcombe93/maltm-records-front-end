@@ -44,13 +44,15 @@ function App() {
         <Route path="/genres" element={<Genres />} />
         <Route path="/about" element={<About />} />
         <Route path="/albums/search" element={<SearchFilter />} />
-        <Route path="/albums/search/:character" element={<SearchFilter />} />
-        <Route
-          path="/genre/:genre_option"
-          element={<GenreDetail artists={artists} />}
-        />
-        <Route path="/artists/:artistID/add-album" element={<AddAlbum />} />
+
+        <Route path="/albums/search/:character" element={<FilterCharacter />} />
+
+        <Route path="/genre/:genre_option" element={<GenreDetail artists={artists} />} />
+        <Route path= "/artists/:artistID/add-album" element = {<AddAlbum/>} />
+
+
         <Route path="/artists/:artistID/edit-album" element={<EditAlbum />} />
+
       </Routes>
     </>
   );
