@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getArtist } from "../services/artists.js";
-
-
+import "../App.css"
 
 function ArtistDetail() {
   const [artist, setArtist] = useState({});
@@ -18,8 +17,13 @@ function ArtistDetail() {
 
   return (
     <div>
-      <h1>Add Album</h1>
-      <h2>{artist.name}</h2>
+      <h1 className="artist-name">{artist.name}</h1>
+     <p>{artist.genre}</p>
+      <div>
+        <img src={artist.artistImg} className="gallery-pic" />
+       
+        </div>
+        
       
 
       <Link to={`/artists/${artist._id}/add-album`}>

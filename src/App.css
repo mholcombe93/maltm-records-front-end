@@ -11,6 +11,16 @@ input {
   margin: 10px;
 }
 
+.artist-name {
+  font-family: 'Londrina Solid', cursive;
+  text-align: center;
+}
+
+.addAlbumButton {
+  height: 40px;
+  font-size: 30px;
+}
+
 .gallery{
 display: flex;
 flex-wrap: wrap;
