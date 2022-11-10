@@ -21,6 +21,7 @@ import { getAlbums } from "./services/albums.js";
 function App() {
   const [artists, setArtists] = useState([]);
   const [albums, setAlbums] = useState([]);
+  const [toggleApiCall, setToggleApiCall] = useState(false)
   let { artistID } = useParams();
 
   useEffect(() => {
@@ -31,7 +32,7 @@ function App() {
       setAlbums(res);
     };
     callApi();
-  }, []);
+  }, [toggleApiCall]);
 
   return (
     <>
@@ -52,7 +53,7 @@ function App() {
         <Route path="/albums/search/:letter" element={<FilterCharacter albums={albums} />} />
 
         <Route path="/genre/:genre_option" element={<GenreDetail artists={artists} />} />
-        <Route path= "/artists/:artistID/add-album" element = {<AddAlbum/>} />
+        <Route path="/artists/:artistID/add-album" element={<AddAlbum setToggleApiCall={setToggleApiCall} />} />
 
         <Route
           path="/genre/:genre_option"
@@ -61,9 +62,9 @@ function App() {
         <Route path="/artists/:artistID/add-album" element={<AddAlbum />} />
 
 
-       /* <Route path="/artists/:artistID/edit-album" element={<EditAlbum />} /> */
+        {/* <Route path="/artists/:artistID/edit-album" element={<EditAlbum />} />  */}
 
-        <Route path="/artists/edit-album/:albumID" element={<EditAlbum />} />
+        <Route path="/artists/edit-album/:albumID" element={<EditAlbum setToggleApiCall={setToggleApiCall}/>} />
 
       </Routes>
     </>

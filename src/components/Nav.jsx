@@ -6,7 +6,7 @@ function Nav() {
   return (
     <div className="nav-bar-component">
       <div className="title-logo">
-      <NavLink to="/"><img src={cassette} alt="cassette logo" className="cassette-logo" /></NavLink><h1>B-Side Music</h1>
+      <NavLink to="/"><img src={cassette} alt="cassette logo" className="cassette-logo" /></NavLink><h1 className="b-side-music">B-Side Music</h1>
       </div>
       <div className="nav">
           <div className="navlink"><NavLink to="/">Home</NavLink></div>
