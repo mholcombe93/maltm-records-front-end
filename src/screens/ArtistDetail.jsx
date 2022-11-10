@@ -28,7 +28,7 @@ function ArtistDetail() {
     <div>
       <h1 className="artist-name">{artist.name}</h1>
       {artist.genre.map((genre) => (
-        <p key={genre}>{genre}</p>
+        <p className="genre-list" key={genre}>{genre}</p>
       ))}
       <div>
         <img src={artist.artistImg} className="gallery-pic" />
