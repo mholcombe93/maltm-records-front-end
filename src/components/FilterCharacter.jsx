@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import SearchFilter from "./SearchFilter";
 import AlbumCover from "./AlbumCover";
 import { useEffect, useState } from "react";
