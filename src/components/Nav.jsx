@@ -9,11 +9,11 @@ function Nav() {
       <NavLink to="/"><img src={cassette} alt="cassette logo" className="cassette-logo" /></NavLink><h1 className="b-side-music">B-Side Music</h1>
       </div>
       <div className="nav">
-          <div className="navlink"><NavLink to="/">Home</NavLink></div>
-          <div className="navlink"><NavLink to="/artists">Artists</NavLink></div>
-          <div className="navlink"><NavLink to="/albums">Albums</NavLink></div>
-          <div className="navlink"><NavLink to="/genres">Genres</NavLink></div>
-        <div className="navlink"><NavLink to="/about">About</NavLink></div>
+          <div className="navlink" activeClassName="active"><NavLink to="/">Home</NavLink></div>
+          <div className="navlink" activeClassName="active"><NavLink to="/artists">Artists</NavLink></div>
+          <div className="navlink" activeClassName="active"><NavLink to="/albums">Albums</NavLink></div>
+          <div className="navlink" activeClassName="active"><NavLink to="/genres">Genres</NavLink></div>
+        <div className="navlink" activeClassName="active"><NavLink to="/about">About</NavLink></div>
       </div>
  </div>
     
