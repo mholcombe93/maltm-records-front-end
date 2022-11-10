@@ -74,6 +74,12 @@ justify-content: center;
   box-shadow: 10px 10px 23px 4px rgba(0,0,0,0.75);
 }
 
+.album-cover-artist {
+  display: flex;
+  justify-content: center;
+  /* margin: 1rem; */
+
+}
 
 @media only screen and (max-width: 600px) {
   .genre{

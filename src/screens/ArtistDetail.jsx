@@ -3,9 +3,11 @@ import { useParams, Link } from "react-router-dom";
 import { getArtist } from "../services/artists.js";
 import "../App.css";
 
+
 function ArtistDetail() {
   const [artist, setArtist] = useState({});
   const [artistName, setArtistName] = useState("");
+
 
   const { artistID } = useParams();
 
@@ -21,6 +23,7 @@ function ArtistDetail() {
 
   if (!artist.name) return <h1>Loading...</h1>;
 
+
   return (
     <div>
       <h1 className="artist-name">{artist.name}</h1>
@@ -30,9 +33,16 @@ function ArtistDetail() {
       <div>
         <img src={artist.artistImg} className="gallery-pic" />
       </div>
+
+      <div className="album-cover-artist">
+        {artist.albums.map((album) => (
+          <img src={album.albumCover} className="gallery-pic" alt="Album Cover" />
+        ))}
       
+      </div>
+
       <div className="gallery">
-      <p className="center bio">{artist.bio}</p>
+        <p className="center bio">{artist.bio}</p>
       </div>
 
       <Link to={`/artists/${artist._id}/add-album`}>
@@ -42,7 +52,6 @@ function ArtistDetail() {
       <Link to="/artists">
         <h2>Back to ARTISTS</h2>
       </Link>
-      
     </div>
   );
 }
