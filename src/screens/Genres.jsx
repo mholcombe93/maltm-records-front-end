@@ -19,7 +19,7 @@ function Genres() {
           <Link to={"/genre/Rock"}>
             <div className="genre-gallery Rock">Rock</div>
           </Link>
-          <Link to={"/genre/K-pop"}>
+          <Link to={"/genre/K-Pop"}>
             <div className="genre-gallery K">K-Pop</div>
           </Link>
           <Link to={"/genre/Punk"}>
