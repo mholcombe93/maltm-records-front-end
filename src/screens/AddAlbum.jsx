@@ -43,34 +43,37 @@ function AddAlbum({setToggleApiCall}) {
 
   return (
   <>
-    <h1> Add Album</h1>
-    <form onSubmit={handleSubmit}>
-    <input
-      placeholder="Enter Title"
-      name="title"
-      value={album.title}
-      onChange={handleChange}
-    />
-    <input
-      placeholder="Enter Album Image"
-      name="albumCover"
-      value={album.albumCover}
-      onChange={handleChange}
-    />
-    <input
-      placeholder="Enter song"
-      name="songs"
-      value={album.songs}
-      onChange={handleChange}
-    />
-    <input
-      placeholder="Enter Year"
-      name="year"
-      value={album.year}
-      onChange={handleChange}
-    />
-    <button type="submit">Submit</button>
-      </form>
+      <h1> Add Album</h1>
+      <br></br>
+      <div className='form'>
+      <form onSubmit={handleSubmit}>
+      <input
+        placeholder="Enter Title"
+        name="title"
+        value={album.title}
+        onChange={handleChange}
+      />
+      <input
+        placeholder="Enter Album Image"
+        name="albumCover"
+        value={album.albumCover}
+        onChange={handleChange}
+      />
+      <input
+        placeholder="Enter song"
+        name="songs"
+        value={album.songs}
+        onChange={handleChange}
+      />
+      <input
+        placeholder="Enter Year"
+        name="year"
+        value={album.year}
+        onChange={handleChange}
+      />
+      <button type="submit">Submit</button>
+        </form>
+      </div>
       </>
   )
 }
