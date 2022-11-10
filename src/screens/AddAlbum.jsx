@@ -52,7 +52,7 @@ function AddAlbum({setToggleApiCall}) {
       onChange={handleChange}
     />
     <input
-      placeholder="Enter Album Image"
+      placeholder="Enter Album Image Link"
       name="albumCover"
       value={album.albumCover}
       onChange={handleChange}
@@ -70,7 +70,7 @@ function AddAlbum({setToggleApiCall}) {
       onChange={handleChange}
         />
         
-    <button type="submit">Submit</button>
+    <button type="submit">Add Album</button>
       </form>
       </>
   )

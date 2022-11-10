@@ -68,7 +68,7 @@ function EditAlbum({ setToggleApiCall }) {
           value={album.year}
           onChange={handleChange}
         />
-        <button type="submit">Submit</button>
+        <button type="submit">Edit Album</button>
       </form>
       <button
         onClick={async () => {
