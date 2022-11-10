@@ -38,6 +38,7 @@ text-align: center;
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
+align-items: center;
 }
 
 .gallery:hover {
@@ -76,6 +77,7 @@ justify-content: center;
 
 .bio{
   font-size: 2em;
+  margin: 5% 15%;
 }
 .bio-content{
   padding-right: 300px;
@@ -182,7 +184,7 @@ background: url(../public/music/edm.webp);
 background-size: 100%;
 background-repeat: no-repeat;
 background-size: cover;
-  }
+
 
   @media only screen and (max-width: 600px) {
     .genre{
@@ -203,5 +205,10 @@ background-size: cover;
       font-size: 1em;
     }
   }
-  
+
  
+  .genre-list{
+    text-align: center;
+    font-size: 1.8em;
+    margin: 0
+  }
