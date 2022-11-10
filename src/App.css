@@ -6,6 +6,11 @@ body {
   font-family: 'Londrina Solid', cursive;
 }
 
+.form{
+display: flex;
+justify-content: center;
+}
+
 input {
   width: 300px;
   height: 10px;
@@ -14,7 +19,26 @@ input {
   border-radius: 25px;
   border: 2px solid white;
   padding: 20px;
+} 
+.album-input{
+  display: block;
+}
 
+.song{
+  display: inline;
+}
+
+.song-div{
+  display: block;
+  margin-top: -10px;
+  padding: 0
+}
+
+
+.add-song, .submit{
+  margin: 10px;
+  padding: 5px;
+  font-size: large;
 }
 
 .artist-name {
@@ -45,13 +69,6 @@ align-items: center;
   cursor: pointer;
 }
 
-.genre{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  height: 80%;
-  width: 75%;
-}
-
 .gallery-pic {
   margin: 5px;
   height: 250px;
@@ -60,6 +77,14 @@ align-items: center;
   -moz-box-shadow: 10px 10px 23px 4px rgba(0,0,0,0.75);
   box-shadow: 10px 10px 23px 4px rgba(48, 47, 47, 0.75);
 }
+
+.genre{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 80%;
+  width: 75%;
+}
+
 .genre-gallery {
   display: flex;
   align-items: center;
@@ -73,6 +98,12 @@ align-items: center;
   -webkit-box-shadow: 10px 10px 23px 4px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 10px 23px 4px rgba(0,0,0,0.75);
   box-shadow: 10px 10px 23px 4px rgba(0,0,0,0.75);
+}
+
+.genre-list{
+  text-align: center;
+  font-size: 1.8em;
+  margin: 0
 }
 
 .album-cover-artist {
@@ -234,8 +265,3 @@ background-size: cover;
   }
 
  
-  .genre-list{
-    text-align: center;
-    font-size: 1.8em;
-    margin: 0
-  }

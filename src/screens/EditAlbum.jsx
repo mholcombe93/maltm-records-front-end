@@ -43,33 +43,38 @@ function EditAlbum({ setToggleApiCall }) {
   return (
     <>
       <h1>Edit Album</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          placeholder="Enter Title"
-          name="title"
-          value={album.title}
-          onChange={handleChange}
-        />
-        <input
-          placeholder="Enter Album Image"
-          name="albumCover"
-          value={album.albumCover}
-          onChange={handleChange}
-        />
-        {/* <input
-      placeholder="Enter song"
-      name="songs"
-      value={album.songs}
-      onChange={handleChange}
-    /> */}
-        <input
-          placeholder="Enter Year"
-          name="year"
-          value={album.year}
-          onChange={handleChange}
-        />
-        <button type="submit">Submit</button>
-      </form>
+      <div className="form">
+        <form onSubmit={handleSubmit}>
+          <input
+            className="album-input"
+            placeholder="Enter Title"
+            name="title"
+            value={album.title}
+            onChange={handleChange}
+          />
+          <input
+            className="album-input"
+            placeholder="Enter Album Image"
+            name="albumCover"
+            value={album.albumCover}
+            onChange={handleChange}
+          />
+          {/* <input
+        placeholder="Enter song"
+        name="songs"
+        value={album.songs}
+        onChange={handleChange}
+      /> */}
+          <input
+            className="album-input"
+            placeholder="Enter Year"
+            name="year"
+            value={album.year}
+            onChange={handleChange}
+          />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
       <button
         onClick={async () => {
           await deleteAlbum(album._id);
