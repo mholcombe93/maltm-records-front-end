@@ -9,10 +9,20 @@
   text-align: center;
   align-items: center;
   justify-content: center;
-  backdrop-filter: blur(.15rem);
-  /* box-shadow: -24.7rem 0rem 1.1rem .35rem rgba(247, 5, 5, 0.127) inset; */
+  backdrop-filter: blur(.25rem);
+
 }
 
+h1{
+  text-align: center;
+}
+.track-list{
+  border: 2px solid black;
+  overflow: wrap;
+  margin-left: 6rem;
+  margin-right: 6rem;
+  font-size: 1.4rem;
+}
 ul {
   text-align: center;
   padding: 0;
@@ -21,20 +31,44 @@ ul {
 li{
   list-style: none;
   padding: 0px;
+  overflow: wrap;
 }
 .album-year{
   font-size: 20px;
 }
-.modal-header, .modal-footer {
+.modal-header {
   padding: 10px;
   background-color: white;
   text-align: center;
   color: black;
+  border-radius: 1rem;
+  display: grid;
+  background:radial-gradient(circle, rgba(206, 209, 38, 0.738) 3%, transparent 90%) rgba(19, 117, 137, .8);
+}
+
+.modal-exit{
+  display: inline-block;
+  width: 1em;
+  background-color: white;
+  -webkit-box-shadow: 10px 10px 46px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 46px -1px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 46px -1px rgba(0,0,0,0.75);
+  display: flex;
+  justify-content: right;
+
+}
+
+.Xbutton{
+  display: flex;
+  justify-content: right;
+  flex-direction: column-reverse;
+
 }
 
 .modal-body {
   padding: 10px;
-  background-color: white;
+  /* background-color: white; */
+  background:radial-gradient(circle, rgba(199, 189, 196, 0.855) 5%, transparent 90%) rgb(46, 12, 5);
 }
 
 .modal-image{
