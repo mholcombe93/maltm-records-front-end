@@ -18,25 +18,6 @@ export const getArtist = async (id) => {
   }
 };
 
-// export const getArtistName = async () => {
-//   try{
-//   const response = await api.get()
-//   return response.data;
-// } catch (error) {
-//   throw error;
-// }
-  
-// }
-
-// export const getAlbumName = async () => {
-//   try{
-//     const response = await api.get()
-//     return response.data;
-//   } catch (error) {
-//     throw error;
-//   }
-// }
-
 export const createArtist = async (artistData) => {
   try {
     const response = await api.post("/artists", artistData);
@@ -62,7 +43,7 @@ export const deleteArtist = async (id) => {
   } catch (error) {
     throw error;
   }
-  //how to delete albums with artist
+  
 };
 
 
