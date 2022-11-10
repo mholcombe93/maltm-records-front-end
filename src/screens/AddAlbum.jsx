@@ -64,7 +64,7 @@ console.log(setAlbum, setAlbum.songs)
           />
           <input
             className="album-input"
-            placeholder="Enter Album Image"
+            placeholder="Enter Album Image Link"
             name="albumCover"
             value={album.albumCover}
             onChange={handleChange}
@@ -93,12 +93,13 @@ console.log(setAlbum, setAlbum.songs)
           </button>
           <br></br>
           <button className="submit" type="submit">
-            Submit
+            Add Album
           </button>
         </form>
       </div>
     </>
   );
+
 }
 
 export default AddAlbum

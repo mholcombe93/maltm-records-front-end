@@ -54,17 +54,11 @@ function EditAlbum({ setToggleApiCall }) {
           />
           <input
             className="album-input"
-            placeholder="Enter Album Image"
+            placeholder="Enter Album Image Link"
             name="albumCover"
             value={album.albumCover}
             onChange={handleChange}
           />
-          {/* <input
-        placeholder="Enter song"
-        name="songs"
-        value={album.songs}
-        onChange={handleChange}
-      /> */}
           <input
             className="album-input"
             placeholder="Enter Year"
@@ -72,9 +66,10 @@ function EditAlbum({ setToggleApiCall }) {
             value={album.year}
             onChange={handleChange}
           />
-          <button type="submit">Submit</button>
+          <button type="submit">Edit Album</button>
         </form>
       </div>
+
       <button
         onClick={async () => {
           await deleteAlbum(album._id);
