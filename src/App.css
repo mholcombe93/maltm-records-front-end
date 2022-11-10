@@ -75,6 +75,17 @@ align-items: center;
   box-shadow: 10px 10px 23px 4px rgba(0,0,0,0.75);
 }
 
+.album-cover-artist {
+  display: flex;
+  justify-content: center;
+  /* margin: 1rem; */
+
+}
+img:hover {
+  filter: brightness(1.2);
+  transform: scale(1.16);
+  transition: 300ms ease-in-out;
+}
 
 @media only screen and (max-width: 600px) {
   .genre{
@@ -95,6 +106,13 @@ align-items: center;
   font-size: 2em;
   margin: 5% 15%;
 }
+.bio-content{
+  padding-right: 300px;
+}
+.bio-link{
+  text-decoration: underline;
+}
+
 .center{
   text-align: center;
 }
@@ -194,6 +212,27 @@ background-size: 100%;
 background-repeat: no-repeat;
 background-size: cover;
   }
+
+  @media only screen and (max-width: 600px) {
+    .genre{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .gallery-pic {
+      height: 100px;
+    }
+    .genre-gallery {
+     height: 100px;
+       }
+  
+    .bio-content{
+       padding: 1px;
+     }
+     .bio{
+      font-size: 1em;
+    }
+  }
+
  
   .genre-list{
     text-align: center;
