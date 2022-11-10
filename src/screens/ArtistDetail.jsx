@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getArtist } from "../services/artists.js";
+import AlbumCover from "../components/AlbumCover.jsx";
 import "../App.css";
 
 
@@ -28,7 +29,9 @@ function ArtistDetail() {
     <div>
       <h1 className="artist-name">{artist.name}</h1>
       {artist.genre.map((genre) => (
-        <p className="genre-list" key={genre}>{genre}</p>
+        <p className="genre-list" key={genre}>
+          {genre}
+        </p>
       ))}
       <div>
         <img src={artist.artistImg} className="gallery-pic" />
@@ -36,9 +39,8 @@ function ArtistDetail() {
 
       <div className="album-cover-artist">
         {artist.albums.map((album) => (
-          <img src={album.albumCover} className="gallery-pic" alt="Album Cover" />
+          <AlbumCover key={album._id} album_id={album._id} />
         ))}
-      
       </div>
 
       <div className="gallery">
