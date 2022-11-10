@@ -72,6 +72,7 @@ function AddAlbum({setToggleApiCall}) {
         
     <button type="submit">Add Album</button>
       </form>
+
       </>
   )
 }
