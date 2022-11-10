@@ -81,6 +81,11 @@ align-items: center;
   /* margin: 1rem; */
 
 }
+img:hover {
+  filter: brightness(1.2);
+  transform: scale(1.16);
+  transition: 300ms ease-in-out;
+}
 
 @media only screen and (max-width: 600px) {
   .genre{
@@ -206,7 +211,7 @@ background: url(../public/music/edm.webp);
 background-size: 100%;
 background-repeat: no-repeat;
 background-size: cover;
-
+  }
 
   @media only screen and (max-width: 600px) {
     .genre{
