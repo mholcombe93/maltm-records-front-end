@@ -75,6 +75,28 @@ align-items: center;
   box-shadow: 10px 10px 23px 4px rgba(0,0,0,0.75);
 }
 
+.album-cover-artist {
+  display: flex;
+  justify-content: center;
+  /* margin: 1rem; */
+
+}
+
+@media only screen and (max-width: 600px) {
+  .genre{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .gallery-pic {
+    height: 100px;
+  }
+      .genre-gallery {
+        height: 100px;
+        
+      }
+
+}
+
 .bio{
   font-size: 2em;
   margin: 5% 15%;

@@ -68,7 +68,8 @@ function AddAlbum({setToggleApiCall}) {
       name="year"
       value={album.year}
       onChange={handleChange}
-    />
+        />
+        
     <button type="submit">Submit</button>
       </form>
       </>
