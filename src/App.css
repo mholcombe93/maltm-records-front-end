@@ -38,6 +38,7 @@ text-align: center;
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
+align-items: center;
 }
 
 .gallery:hover {
@@ -92,6 +93,7 @@ justify-content: center;
 
 .bio{
   font-size: 2em;
+  margin: 5% 15%;
 }
 .center{
   text-align: center;
@@ -193,3 +195,8 @@ background-repeat: no-repeat;
 background-size: cover;
   }
  
+  .genre-list{
+    text-align: center;
+    font-size: 1.8em;
+    margin: 0
+  }
