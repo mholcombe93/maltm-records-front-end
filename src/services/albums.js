@@ -42,7 +42,5 @@ export const deleteAlbum = async (id) => {
     return response.data;
   } catch (error) {
     throw error;
-  }// remove from the artist as well in backend
+  }
 };
-
-
