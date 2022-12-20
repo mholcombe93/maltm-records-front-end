@@ -7,19 +7,24 @@ function FilterCharacter({albums}) {
   const { letter } = useParams()
   const [albumsList, setAlbumsList] = useState([]);
   let searchLetter = letter.toLowerCase()
+  const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+  const firstLetter = (arr, i)=>{return arr.title.split("")[0].toLowerCase().includes(`${i}`)}
 
   useEffect(() => {
-    console.log(letter)
     let filteredList = [] 
     if (searchLetter == 'numbers') {
-      for (let i = 0; i < 10; i++) { //fix this so that it displays numbered albums
-        filteredList.push(albums.filter((album) => {
-          return album.title.split("")[0].includes(`${i}`)
-        }))
-      }
+      filteredList = albums.filter((album) => {
+        for (const number of numbers) {
+          console.log(number)
+          if(firstLetter(album, number))
+          return album.title.split("")[0].includes(`${number}`)
+        }
+})
+      
     } else {
       filteredList = albums.filter((album) => {
-        return album.title.split("")[0].toLowerCase().includes(searchLetter);
+        return firstLetter(album, searchLetter)
+        //album.title.split("")[0].toLowerCase().includes(searchLetter);
       })
     };
 
