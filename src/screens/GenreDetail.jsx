@@ -16,7 +16,7 @@ function GenreDetail({ artists }) {
     setArtistsList(filteredList)
   }, [genre_option]);
 
-console.log(artists)
+// console.log(artists)
   return (
     <div>
         <h1 className="center">{genre_option}</h1>
